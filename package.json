@@ -1,0 +1,48 @@
+{
+  "name": "new-talk",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "license": "CC-BY-4.0",
+  "scripts": {
+    "setup": "tsx scripts/setup.ts",
+    "dev": "tsx scripts/dev.ts",
+    "build": "npm run build:pug && npm run build:sass && npm run build:js",
+    "build:pug": "tsx scripts/build-pug.ts",
+    "build:sass": "sass scss/lemon.scss:css/lemon.css scss/talk.scss:css/talk.css scss/print:css/print demos/scss:demos/css --no-source-map",
+    "build:js": "bun build --root demos/ts demos/ts/[!_]*.ts --outdir demos/js --target browser",
+    "watch:pug": "tsx scripts/watch-pug.ts",
+    "watch:sass": "sass scss/lemon.scss:css/lemon.css scss/talk.scss:css/talk.css scss/print:css/print demos/scss:demos/css --watch --no-source-map",
+    "watch:js": "bun build --root demos/ts demos/ts/[!_]*.ts --outdir demos/js --target browser --watch --no-clear-screen",
+    "update:reveal": "tsx scripts/update-reveal.ts",
+    "check:pug": "tsx scripts/build-pug.ts --check",
+    "check:fonts": "tsx scripts/check-fonts.ts",
+    "postinstall": "tsx scripts/check-fonts.ts || true",
+    "test": "sass scss/lemon.scss:css/lemon.css scss/talk.scss:css/talk.css scss/print:css/print --no-source-map --quiet && tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.demos.json && tsx --test scripts/*.test.ts && npm run check:pug"
+  },
+  "keywords": [
+    "reveal",
+    "slides",
+    "presentation"
+  ],
+  "author": {
+    "name": "Lemon",
+    "web": "https://ahoylemon.xyz"
+  },
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.33",
+    "@types/prompts": "^2.4.9",
+    "browser-sync": "^3.0.4",
+    "chalk": "^5.6.2",
+    "chokidar": "^3.6.0",
+    "ora": "^7.0.1",
+    "prompts": "^2.4.2",
+    "pug": "^3.0.3",
+    "sass": "^1.97.3",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}

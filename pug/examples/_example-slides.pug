@@ -1,0 +1,10 @@
+//- The Lemon slide catalogue: every template in lemon.scss, with each one's alternates. It's a fresh talk's starting content, so pug/index.pug includes it between the shared intro and outro: copy what you need into your own files in pug/sections/, then swap this include for yours. docs/LEMON-DECK.md says what each template is for.
+//-
+//- One family per partial in catalogue/, each its own vertical stack: right is the next family, down walks through it. Each stack sets data-spine, so js/stacks.js puts the family and the current data-spine-section on the spine as you browse. Nothing here repeats the shared sections (the intro reel, hello, hit me up, thank you).
+
+include catalogue/_say.pug
+include catalogue/_code.pug
+include catalogue/_define.pug
+include catalogue/_media.pug
+include catalogue/_registers.pug
+include catalogue/_transitions.pug

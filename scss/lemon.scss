@@ -1,0 +1,39 @@
+// lemon.scss — the Lemon deck system, shared by every talk.
+//
+// Lemon owns the sensible defaults: the palette (as tokens a talk can retune), type roles, the canvas and the spine, the everyday components, slide templates, and motion. A talk's own surfaces (things only that talk has) live in talk.scss. The full guide is docs/LEMON-DECK.md.
+//
+// This file holds no rules, only the order things load in.
+
+// BASE: tokens on :root, the canvas, default type, the browser's own surfaces
+@use "lemon/base/root";
+@use "lemon/base/canvas";
+@use "lemon/base/type";
+@use "lemon/base/browser";
+
+// LAYOUT: the spine down the left edge of every slide
+@use "lemon/layout/spine";
+
+// COMPONENTS: code, tables, blocks, embeds, loud effects, gag placeholders, the Blank Metal pieces
+@use "lemon/components/code";
+@use "lemon/components/tables";
+@use "lemon/components/blocks";
+@use "lemon/components/effects";
+@use "lemon/components/embeds";
+@use "lemon/components/gag";
+@use "lemon/components/blank-metal";
+
+// TEMPLATES: whole-slide compositions
+@use "lemon/templates/cover";
+@use "lemon/templates/statement";
+@use "lemon/templates/divider";
+@use "lemon/templates/demo";
+@use "lemon/templates/over-media";
+@use "lemon/templates/reference";
+
+// MOTION: the dissolve, landing fragments, auto-animate
+@use "lemon/motion/transitions";
+@use "lemon/motion/fragments";
+@use "lemon/motion/auto-animate";
+
+// FINALLY, the overrides that need !important
+@use "lemon/todo/shame";

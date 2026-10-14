@@ -1,0 +1,28 @@
+include partials/_variables.pug
+
+doctype html
+html(lang="en")
+  head
+    include partials/_head.pug
+  body  
+    include partials/_mixins.pug
+
+    .reveal
+      .slides
+
+        //- Video Screens
+        include sections/shared/_intros.pug
+
+        //- Personal Intro
+        include sections/shared/_hello.pug
+
+        //- Example Slides (replace with your own slides)
+        include examples/_example-slides.pug
+
+        //- HMU
+        include sections/shared/_hit-me-up.pug
+
+        //- Let's finish this.
+        include sections/shared/_thank-you.pug
+    
+    include partials/_javascripts.pug 
