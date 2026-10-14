@@ -31,6 +31,14 @@ Reveal.initialize({
   // The speaker view's pacing timer only appears when this isn't null. A slide or a whole stack can set its own with data-timing (js/stacks.js).
   defaultTiming: 10,
 
+  // X jumps to the heel ending, the backup for the vote slide's No link when the trackpad isn't to hand (docs/TALK.md, The vote). X isn't one of reveal's own keys.
+  keyboard: {
+    88: () => {
+      const { h, v } = Reveal.getIndices(document.getElementById("heel"));
+      Reveal.slide(h, v);
+    },
+  },
+
   pdfMaxPagesPerSlide: 1,
 
   plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom],

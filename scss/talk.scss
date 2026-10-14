@@ -1,3 +1,6 @@
 // talk.scss — this talk's own surfaces, the things only this talk has. Lemon (scss/lemon.scss) owns everything you'd want again in the next talk; see docs/LEMON-DECK.md.
 //
-// Retune Lemon's colours here by redeclaring any --lemon-* property on :root, e.g. :root { --lemon-field: #c1502e; }. As this file grows, keep it to @use lines over partials in scss/talk/.
+// Retune Lemon's colours here by redeclaring any --lemon-* property on :root, e.g. :root { --lemon-field: #c1502e; }. Keep this file to @use lines over partials in scss/talk/.
+
+// The vote slide's Yes and No (pug/sections/_04-purple.pug).
+@use "talk/vote";

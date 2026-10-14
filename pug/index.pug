@@ -10,19 +10,17 @@ html(lang="en")
     .reveal
       .slides
 
-        //- Video Screens
-        include sections/shared/_intros.pug
+        //- The yes path, in order. The vote slide in _04 links to section#good (next) and section#heel (after the yes path's end). docs/TALK.md has the run.
+        include sections/_01-language.pug
+        include sections/_02-brown.pug
+        include sections/_03-color-isnt-real.pug
+        include sections/_04-purple.pug
+        include sections/_05-line-of-purples.pug
+        include sections/_06-jwst.pug
+        include sections/_07-your-green.pug
+        include sections/_08-denouement.pug
 
-        //- Personal Intro
-        include sections/shared/_hello.pug
-
-        //- Example Slides (replace with your own slides)
-        include examples/_example-slides.pug
-
-        //- HMU
-        include sections/shared/_hit-me-up.pug
-
-        //- Let's finish this.
-        include sections/shared/_thank-you.pug
+        //- The no path: heel mode. Only reached by the No link or X.
+        include sections/_09-heel.pug
     
     include partials/_javascripts.pug 

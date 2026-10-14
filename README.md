@@ -1,8 +1,10 @@
-# Lemon's Talk Template
+# Your brain is dumb, color is a lie, and there's no such thing as "brown"
 
 [![RevealJS](https://img.shields.io/badge/reveal.js-000?style=for-the-badge&labelColor=F2E142&logo=reveal.js&logoColor=111&color=222)](https://revealjs.com/)
 [![Pug](https://img.shields.io/badge/Pug-000?style=for-the-badge&labelColor=A86454&logo=pug&logoColor=white&color=222)](https://pugjs.org/)
 [![Sass](https://img.shields.io/badge/Sass-000?style=for-the-badge&labelColor=CD6799&logo=sass&logoColor=white&color=222)](https://sass-lang.com/)
+
+A lightning talk for the Yay-Yay Conf [Networking & Lightning Talk Challenge](https://weyweyweb.com/social-events/), Torremolinos, 28 October 2026. It lives at [ahoylemon.github.io/color-is-a-lie](https://ahoylemon.github.io/color-is-a-lie/), and the working doc is [`docs/TALK.md`](docs/TALK.md).
 
 A [reveal.js](https://revealjs.com/) presentation template with Pug, Sass, and modern build tools. Every deck starts on the Lemon deck system: a 1280×720 canvas, Syne, Yrsa and Share Tech Mono, statements hung high and flush left, and one dissolve between slides. Retune it per talk from `scss/talk.scss`.
 

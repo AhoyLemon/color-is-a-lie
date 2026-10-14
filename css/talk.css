@@ -1,1 +1,11 @@
-
+.reveal .slides section.vote .answers {
+  display: flex;
+  column-gap: 1.5em;
+  margin-top: 0.4em;
+  font-family: "Yrsa", Georgia, serif;
+  font-size: 1.9em;
+  line-height: 1;
+}
+.reveal .slides section.vote .answers a {
+  text-decoration: none;
+}
