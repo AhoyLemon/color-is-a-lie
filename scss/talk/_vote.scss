@@ -1,0 +1,15 @@
+@use "../lemon/abstracts/variables" as *;
+
+// The vote slide's Yes and No are links, but they read as two answers, not navigation: no underline, set like the statement above them. Hover, focus and active still come from base/_browser.scss.
+.reveal .slides section.vote .answers {
+  display: flex;
+  column-gap: 1.5em;
+  margin-top: 0.4em;
+  font-family: $font-display;
+  font-size: $step-statement;
+  line-height: 1;
+
+  a {
+    text-decoration: none;
+  }
+}

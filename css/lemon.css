@@ -613,7 +613,7 @@
 }
 
 .reveal section.present > .source,
-.reveal section.present cite.credit {
+.reveal section.present:not(.stack) cite.credit {
   opacity: 1;
   transition-delay: 1s;
 }
