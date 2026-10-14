@@ -1,7 +1,7 @@
 {
-  "name": "new-talk",
+  "name": "color-is-a-lie",
   "version": "1.0.0",
-  "description": "",
+  "description": "A lightning talk about why brown doesn't exist, purple is made up, and nobody will ever see your green.",
   "type": "module",
   "license": "CC-BY-4.0",
   "scripts": {
