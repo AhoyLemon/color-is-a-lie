@@ -35,6 +35,13 @@ $ring-weight: 0.35cqw;
     line-height: 1;
   }
 
+  // A second reading after the hex, quieter: "no wavelength".
+  .note {
+    color: $text-quiet;
+    font-family: $font-mono;
+    font-size: $step-small;
+  }
+
   .lead {
     inline-size: var(--reach, 9cqw);
     block-size: $fold-width;

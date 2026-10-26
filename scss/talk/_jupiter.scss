@@ -1,0 +1,46 @@
+@use "../lemon/abstracts/variables" as *;
+
+// Jupiter past both ends of the spectrum (pug/sections/_07-your-green.pug): two frames of the same planet at the same moment, stacked on each other and cut at the middle, infrared above and ultraviolet below, with a seam of black between. The planet sits right of centre on the black, the two labels hang either side of the seam on the left, and the headline lands low on the left over the planet's limb.
+$seam: 0.5cqh;
+
+.reveal .slides section.over-media.jupiter {
+  > img {
+    position: absolute;
+    top: 0;
+    right: 2.5cqw;
+    inline-size: auto;
+    block-size: 100cqh;
+    // Lemon caps slide images at 70cqh. Both frames have to be the whole height to line up.
+    max-block-size: none;
+    margin: 0;
+  }
+
+  > img.infrared {
+    clip-path: inset(0 0 calc(50% + #{$seam} / 2) 0);
+  }
+
+  > img.ultraviolet {
+    clip-path: inset(calc(50% + #{$seam} / 2) 0 0 0);
+  }
+
+  > p.label {
+    position: absolute;
+    left: $safe-x;
+    z-index: 1;
+    margin: 0;
+    font-size: $step-body;
+  }
+
+  > p.label.infrared {
+    bottom: calc(50cqh + 1.5cqh);
+  }
+
+  > p.label.ultraviolet {
+    top: calc(50cqh + 1.5cqh);
+  }
+
+  > h2 {
+    position: relative;
+    z-index: 1;
+  }
+}

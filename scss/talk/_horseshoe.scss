@@ -1,22 +1,21 @@
 @use "../lemon/abstracts/variables" as *;
 
-// The line of purples slide (pug/sections/_05-line-of-purples.pug): the spectrum bent into a horseshoe, from pug/partials/_horseshoe.pug, filling the right of the canvas, with the two statements hung on the left beside it. The diagram is the biggest thing on the slide, so the statements drop to heading size. Its strokes and label sizes are SVG presentation attributes, in viewBox units.
+// The purple beat (pug/sections/_05-line-of-purples.pug): the spectrum drawn across the whole canvas from pug/partials/_horseshoe.pug, with its three captions hung on the statement line and swapping in one spot. On the first click the unlit ends fade, js/purple-beat.js bends the line into the horseshoe on the right, and the heels and wavelength labels land once it has. On the second, the line of purples draws itself across the gap from the violet heel. Strokes and label sizes are SVG presentation attributes, in canvas px.
 
-.reveal .slides section.statement.horseshoe {
+.reveal .slides section.statement.purple-beat {
+  // The three captions share the first grid cell, so each one replaces the last.
   > h2 {
+    grid-area: 1 / 1;
+    max-inline-size: 15ch;
+    margin: 0;
     font-size: $step-heading;
   }
 
-  > h2 + h2 {
-    margin-top: 0.4em;
-  }
-
-  svg.shoe {
+  svg.purple-beat-drawing {
     position: absolute;
-    top: $safe-y;
-    right: $safe-x;
-    block-size: 80cqh;
-    aspect-ratio: 800 / 860;
+    inset: 0;
+    inline-size: 100cqw;
+    block-size: 100cqh;
     overflow: visible;
   }
 
@@ -28,5 +27,53 @@
   .name {
     fill: $text;
     font-family: $font-mono;
+  }
+
+  .unlit {
+    fill: $surface;
+    stroke: $cream-line;
+    stroke-width: 1.5;
+  }
+
+  .fragment.unlit-ends {
+    transition: opacity 400ms $ease-out, visibility 400ms;
+  }
+
+  // The heels and the 380 and 700 land after the bend (1100ms in js/purple-beat.js), and leave at once on the way back.
+  .fragment.heels,
+  .fragment.shoe-labels {
+    transition: opacity 300ms $ease-out, visibility 300ms;
+
+    &.visible {
+      transition-delay: 1000ms;
+    }
+  }
+
+  // The bridge draws from the violet heel: a scale from its left edge, then its name.
+  .fragment.bridge {
+    transition: opacity 120ms linear, visibility 120ms;
+
+    rect {
+      transform-box: fill-box;
+      transform-origin: left center;
+      transform: scaleX(0);
+      transition: transform 700ms $ease-out;
+    }
+
+    text {
+      opacity: 0;
+      transition: opacity 300ms $ease-out;
+    }
+
+    &.visible {
+      rect {
+        transform: scaleX(1);
+      }
+
+      text {
+        opacity: 1;
+        transition-delay: 600ms;
+      }
+    }
   }
 }

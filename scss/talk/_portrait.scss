@@ -32,3 +32,23 @@
   block-size: 70cqh;
   object-fit: contain;
 }
+
+
+// A full-bleed photo as an img in the slide instead of a reveal background, so an eyedropper on it lines up in canvas units. Crop it with object-position.
+.reveal .slides section.over-media.full-bleed {
+  > img {
+    position: absolute;
+    inset: 0;
+    inline-size: 100cqw;
+    block-size: 100cqh;
+    max-block-size: none;
+    margin: 0;
+    object-fit: cover;
+  }
+
+  > h2,
+  > p {
+    position: relative;
+    z-index: 1;
+  }
+}

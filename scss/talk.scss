@@ -21,5 +21,16 @@
 // The vote slide's Yes and No (pug/sections/_04-purple.pug).
 @use "talk/vote";
 
-// The CIE 1931 horseshoe on the line of purples slide (pug/sections/_05-line-of-purples.pug).
+// The purple beat: the spectrum as a line, bent into a horseshoe and closed with purple (pug/sections/_05-line-of-purples.pug).
 @use "talk/horseshoe";
+
+// Hubble and Webb side by side, and Webb's infrared translated (pug/sections/_06-jwst.pug).
+@use "talk/pillars";
+@use "talk/spectrum";
+
+// The fruit stand in four bands, three of them behind lenses for eyes missing a kind of cone, then Jupiter in infrared and ultraviolet (pug/sections/_07-your-green.pug).
+@use "talk/lenses";
+@use "talk/jupiter";
+
+// The end of the yes path: the lemon, centred (pug/sections/_08-denouement.pug).
+@use "talk/lemon-end";

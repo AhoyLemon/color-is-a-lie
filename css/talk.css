@@ -14,6 +14,10 @@
   line-height: 0.95;
 }
 
+.reveal .slides section.over-media.has-subhead > p {
+  font-size: 1em;
+}
+
 .reveal .slides section.swatches {
   --slide-pad-y: 8cqh;
   align-content: start;
@@ -125,6 +129,11 @@
   font-size: 1em;
   line-height: 1;
 }
+.reveal .slides section .eyedropper .note {
+  color: var(--lemon-text-quiet);
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6em;
+}
 .reveal .slides section .eyedropper .lead {
   inline-size: var(--reach, 9cqw);
   block-size: 0.16cqw;
@@ -162,6 +171,21 @@
   inline-size: auto;
   block-size: 70cqh;
   object-fit: contain;
+}
+
+.reveal .slides section.over-media.full-bleed > img {
+  position: absolute;
+  inset: 0;
+  inline-size: 100cqw;
+  block-size: 100cqh;
+  max-block-size: none;
+  margin: 0;
+  object-fit: cover;
+}
+.reveal .slides section.over-media.full-bleed > h2,
+.reveal .slides section.over-media.full-bleed > p {
+  position: relative;
+  z-index: 1;
 }
 
 .reveal .slides section.dictionary .entry {
@@ -251,25 +275,272 @@
   text-decoration: none;
 }
 
-.reveal .slides section.statement.horseshoe > h2 {
+.reveal .slides section.statement.purple-beat > h2 {
+  grid-area: 1/1;
+  max-inline-size: 15ch;
+  margin: 0;
   font-size: 1.25em;
 }
-.reveal .slides section.statement.horseshoe > h2 + h2 {
-  margin-top: 0.4em;
-}
-.reveal .slides section.statement.horseshoe svg.shoe {
+.reveal .slides section.statement.purple-beat svg.purple-beat-drawing {
   position: absolute;
-  top: 10cqh;
-  right: 7.5cqw;
-  block-size: 80cqh;
-  aspect-ratio: 800/860;
+  inset: 0;
+  inline-size: 100cqw;
+  block-size: 100cqh;
   overflow: visible;
 }
-.reveal .slides section.statement.horseshoe .labels {
+.reveal .slides section.statement.purple-beat .labels {
   fill: var(--lemon-text-quiet);
   font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
-.reveal .slides section.statement.horseshoe .name {
+.reveal .slides section.statement.purple-beat .name {
   fill: var(--lemon-text);
   font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+.reveal .slides section.statement.purple-beat .unlit {
+  fill: var(--lemon-surface);
+  stroke: var(--lemon-cream-line);
+  stroke-width: 1.5;
+}
+.reveal .slides section.statement.purple-beat .fragment.unlit-ends {
+  transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), visibility 400ms;
+}
+.reveal .slides section.statement.purple-beat .fragment.heels,
+.reveal .slides section.statement.purple-beat .fragment.shoe-labels {
+  transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1), visibility 300ms;
+}
+.reveal .slides section.statement.purple-beat .fragment.heels.visible,
+.reveal .slides section.statement.purple-beat .fragment.shoe-labels.visible {
+  transition-delay: 1000ms;
+}
+.reveal .slides section.statement.purple-beat .fragment.bridge {
+  transition: opacity 120ms linear, visibility 120ms;
+}
+.reveal .slides section.statement.purple-beat .fragment.bridge rect {
+  transform-box: fill-box;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal .slides section.statement.purple-beat .fragment.bridge text {
+  opacity: 0;
+  transition: opacity 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal .slides section.statement.purple-beat .fragment.bridge.visible rect {
+  transform: scaleX(1);
+}
+.reveal .slides section.statement.purple-beat .fragment.bridge.visible text {
+  opacity: 1;
+  transition-delay: 600ms;
+}
+
+.reveal .slides section.over-media.pillars > img {
+  position: absolute;
+  top: 0;
+  inline-size: 50cqw;
+  block-size: 100cqh;
+  max-block-size: none;
+  margin: 0;
+  object-fit: cover;
+}
+.reveal .slides section.over-media.pillars > img.hubble {
+  left: 0;
+  object-position: center 45%;
+}
+.reveal .slides section.over-media.pillars > img.webb {
+  left: 50cqw;
+  object-position: center 40%;
+}
+.reveal .slides section.over-media.pillars .fragment.webb {
+  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1), visibility 500ms;
+}
+.reveal .slides section.over-media.pillars > p.label {
+  position: absolute;
+  bottom: 12cqh;
+  z-index: 1;
+  max-inline-size: 18ch;
+  padding: 0.12em 0.35em 0.18em;
+  background: var(--lemon-cream);
+  color: var(--lemon-ink);
+  font-family: "Syne", "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.reveal .slides section.over-media.pillars > p.label.hubble {
+  left: 7.5cqw;
+}
+.reveal .slides section.over-media.pillars > p.label.webb {
+  left: calc(50cqw + 7.5cqw);
+}
+
+.reveal .slides section.over-media.translated svg.translation {
+  position: absolute;
+  top: 50cqh;
+  left: 7.5cqw;
+  inline-size: calc(100cqw - 2 * 7.5cqw);
+  overflow: visible;
+  translate: 0 -50%;
+}
+.reveal .slides section.over-media.translated .labels {
+  fill: var(--lemon-text-quiet);
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+.reveal .slides section.over-media.translated .axis {
+  stroke: var(--lemon-cream-line);
+  stroke-width: 1.5;
+}
+.reveal .slides section.over-media.translated .unlit {
+  fill: var(--lemon-surface);
+  stroke: var(--lemon-cream-line);
+  stroke-width: 1.5;
+}
+
+.reveal .slides section.over-media.lenses > img.scene,
+.reveal .slides section.over-media.lenses .band.lens > img {
+  position: absolute;
+  left: 0;
+  inline-size: 100cqw;
+  block-size: 100cqh;
+  max-block-size: none;
+  margin: 0;
+  object-fit: cover;
+}
+.reveal .slides section.over-media.lenses > img.scene {
+  top: 0;
+}
+.reveal .slides section.over-media.lenses .lens-filters {
+  position: absolute;
+  inline-size: 0;
+  block-size: 0;
+}
+.reveal .slides section.over-media.lenses .band {
+  position: absolute;
+  top: calc(var(--row) * 25cqh);
+  left: 0;
+  inline-size: 100cqw;
+  block-size: 25cqh;
+  overflow: hidden;
+}
+.reveal .slides section.over-media.lenses .band.you {
+  --row: 0;
+}
+.reveal .slides section.over-media.lenses .band.deutan {
+  --row: 1;
+}
+.reveal .slides section.over-media.lenses .band.tritan {
+  --row: 2;
+}
+.reveal .slides section.over-media.lenses .band.achromat {
+  --row: 3;
+}
+.reveal .slides section.over-media.lenses .band.lens > img {
+  top: calc(var(--row) * -1 * 25cqh);
+}
+.reveal .slides section.over-media.lenses .band.deutan > img {
+  filter: url(#Deuteranopia);
+}
+.reveal .slides section.over-media.lenses .band.tritan > img {
+  filter: url(#Tritanopia);
+}
+.reveal .slides section.over-media.lenses .band.achromat > img {
+  filter: url(#Achromatopsia);
+}
+.reveal .slides section.over-media.lenses .band.lens::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  block-size: 0.5cqh;
+  background: var(--lemon-ink);
+}
+.reveal .slides section.over-media.lenses .band.fragment {
+  transition: opacity 900ms cubic-bezier(0.16, 1, 0.3, 1), visibility 900ms;
+}
+.reveal .slides section.over-media.lenses .retina {
+  position: absolute;
+  top: 50%;
+  right: 7.5cqw;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  translate: 0 -50%;
+}
+.reveal .slides section.over-media.lenses .retina svg {
+  display: block;
+  inline-size: 18cqh;
+  block-size: 18cqh;
+  background: var(--lemon-ink);
+  outline: 0.16cqw solid var(--lemon-cream);
+}
+.reveal .slides section.over-media.lenses .retina figcaption {
+  color: var(--lemon-text-quiet);
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6em;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0.2em 0.5em;
+  background: var(--lemon-ink);
+  color: var(--lemon-cream);
+}
+.reveal .slides section.over-media.lenses > h2 {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section.over-media.lenses .band.fragment {
+    transition: opacity 240ms linear, visibility 240ms;
+  }
+}
+.reveal .slides section.over-media.jupiter > img {
+  position: absolute;
+  top: 0;
+  right: 2.5cqw;
+  inline-size: auto;
+  block-size: 100cqh;
+  max-block-size: none;
+  margin: 0;
+}
+.reveal .slides section.over-media.jupiter > img.infrared {
+  clip-path: inset(0 0 calc(50% + 0.5cqh / 2) 0);
+}
+.reveal .slides section.over-media.jupiter > img.ultraviolet {
+  clip-path: inset(calc(50% + 0.5cqh / 2) 0 0 0);
+}
+.reveal .slides section.over-media.jupiter > p.label {
+  position: absolute;
+  left: 7.5cqw;
+  z-index: 1;
+  margin: 0;
+  font-size: 0.8em;
+}
+.reveal .slides section.over-media.jupiter > p.label.infrared {
+  bottom: 51.5cqh;
+}
+.reveal .slides section.over-media.jupiter > p.label.ultraviolet {
+  top: 51.5cqh;
+}
+.reveal .slides section.over-media.jupiter > h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.reveal .slides section.lemon-slide.lemon-end {
+  justify-items: center;
+  align-content: center;
+}
+.reveal .slides section.lemon-slide.lemon-end > img {
+  width: 56cqh;
+  height: 56cqh;
+}
+.reveal .slides section.lemon-slide.lemon-end > p {
+  position: absolute;
+  right: 0;
+  bottom: 9cqh;
+  left: 0;
+  margin: 0;
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6em;
+  line-height: 1.3;
+  text-align: center;
 }

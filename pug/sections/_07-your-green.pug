@@ -1,15 +1,53 @@
-//- 6:15 YOUR GREEN ISN'T MY GREEN.
+//- 6:15 YOUR GREEN ISN'T MY GREEN. Qualia, with data: like Webb, you're a set of sensors, some of you are colorblind, and all of us are.
 
-section.statement(data-timing="30")
-  h2 Your green isn't my green.
+//- Ishihara plate 9: 74 to normal color vision, 21 to red-green color blindness. A transparent PNG, so it sits straight on the ink.
+section.over-media.portrait.is-figure(data-timing="15")
+  img(src="img/ishihara.png" alt="An Ishihara color vision plate, a circle of orange and green dots")
+  h2 Just like you.
   aside.notes
     ul
-      li No conversation, empathy or drugs will show you what they see when they say green.
-      li Statistically, some of the men in this room are colorblind.
+      li Just like you. Your eyes are a set of sensors too.
+      li Most of you see 74. Some of you see 21, and somebody once told you that you're colorblind.
+      li Around 8% of men and half a percent of women of Northern European descent have red-green color vision deficiency.
+      li No quiz. Don't ask anyone what they see.
 
-section.statement(data-timing="30")
-  h2 Different hardware. Same word.
-  p.aside (cone ratios from 1:1 to 16:1, and everyone still agrees on yellow)
+//- La Boqueria through four eyes, one horizontal band each. It arrives as the plain photo. On the click every band takes its eye at once: the top band stays as it is, for the eye from slide 3 with about 1.1 red cones per green, and the three below go behind lenses for eyes with no green cones, no blue cones and no working cones, most common to rarest, each with a drawing of its cones (+lensFilters and +retina, pug/partials/_lenses.pug). The headline lands on the second click.
+section.over-media.lenses(data-timing="30")
+  img.scene(src="img/boqueria.jpg" alt="A fruit stall at La Boqueria in Barcelona")
+  +lensFilters
+  .band.you.fragment.fade-in(data-fragment-index="1")
+    +retina("trichromat", "1.1 red cones per green")
+  .band.lens.deutan.fragment.fade-in(data-fragment-index="1")
+    img(src="img/boqueria.jpg" alt="" role="presentation")
+    +retina("deutan", "no green cones")
+  .band.lens.tritan.fragment.fade-in(data-fragment-index="1")
+    img(src="img/boqueria.jpg" alt="" role="presentation")
+    +retina("tritan", "no blue cones")
+  .band.lens.achromat.fragment.fade-in(data-fragment-index="1")
+    img(src="img/boqueria.jpg" alt="" role="presentation")
+    +retina("achromat", "no working cones")
+  h2.fragment(data-fragment-index="2") Some of you are colorblind.
+  cite.credit Photo: Daderot
   aside.notes
     ul
-      li Hofer et al. 2005. docs/TALK.md, Claims.
+      li La Boqueria.
+      li Click: through four eyes. The top strip is the eye from slide 3, about as many red cones as green.
+      li No green cones: reds, oranges and greens all fold into the same olive. The commonest kind, about 1 man in 100, and milder versions in about 5 more.
+      li No blue cones: the pears go pink and the limes go teal. That one's rare.
+      li No working cones: grey. Rarer still, about 1 in 30,000.
+      li Click: some of you are colorblind.
+      li The lenses are Machado et al.'s 2009 simulation, run on this photo in the browser.
+
+//- Jupiter at one moment, 11 January 2017 at 15:41 UT: the top half from Gemini North in infrared, the bottom half from Hubble in ultraviolet. The two frames line up to a few pixels, so the halves meet as one planet with a seam of black between them. The headline lands on the click.
+section.over-media.jupiter(data-background-color="#000" data-timing="20")
+  img.infrared(src="img/jupiter-infrared.jpg" alt="The top half of Jupiter in infrared, glowing orange where its clouds are thin")
+  img.ultraviolet(src="img/jupiter-ultraviolet.jpg" alt="The bottom half of the same Jupiter in ultraviolet, pale lilac, with the Great Red Spot gone dark")
+  p.label.infrared infrared
+  p.label.ultraviolet ultraviolet
+  h2.fragment We're all colorblind.
+  cite.credit Gemini North and Hubble, M. H. Wong et al.
+  aside.notes
+    ul
+      li Jupiter, both halves at the same moment. The top is infrared, from Gemini North: it glows where the clouds are thin and heat gets out. The bottom is ultraviolet, from Hubble: the Great Red Spot goes dark.
+      li Neither half is a color. Somebody picked those, the way Webb's team does.
+      li Click: we're all colorblind. You can't see ultraviolet, and bees can. Pit vipers sense infrared. Most birds have four kinds of cone, and you have three.

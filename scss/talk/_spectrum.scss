@@ -1,0 +1,30 @@
+@use "../lemon/abstracts/variables" as *;
+
+// Webb's infrared, translated (pug/sections/_06-jwst.pug, drawn by +webbTranslation in pug/partials/_horseshoe.pug): one row across the safe area, centred on the canvas, with no caption. The drawing is the slide.
+
+.reveal .slides section.over-media.translated {
+  svg.translation {
+    position: absolute;
+    top: 50cqh;
+    left: $safe-x;
+    inline-size: calc(100cqw - 2 * #{$safe-x});
+    overflow: visible;
+    translate: 0 -50%;
+  }
+
+  .labels {
+    fill: $text-quiet;
+    font-family: $font-mono;
+  }
+
+  .axis {
+    stroke: $cream-line;
+    stroke-width: 1.5;
+  }
+
+  .unlit {
+    fill: $surface;
+    stroke: $cream-line;
+    stroke-width: 1.5;
+  }
+}

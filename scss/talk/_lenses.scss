@@ -1,0 +1,124 @@
+@use "../lemon/abstracts/variables" as *;
+@use "../lemon/abstracts/mixins" as *;
+
+// The fruit stand through four eyes (pug/sections/_07-your-green.pug): one photo, full bleed, in four horizontal bands. The top band is the photo itself. Each of the other three holds a second copy of the photo, lined up exactly with the one underneath and run through a lens from +lensFilters. They all crossfade in together on the click, so each band's colours drain to what its eye gets. A retina drawing and its caption sit at the right end of every band, clear of the headline low on the left.
+$band: 25cqh;
+$seam: 0.5cqh;
+
+.reveal .slides section.over-media.lenses {
+  > img.scene,
+  .band.lens > img {
+    position: absolute;
+    left: 0;
+    inline-size: 100cqw;
+    block-size: 100cqh;
+    // Lemon caps slide images at 70cqh. Every copy has to be the whole canvas to line up.
+    max-block-size: none;
+    margin: 0;
+    object-fit: cover;
+  }
+
+  > img.scene {
+    top: 0;
+  }
+
+  .lens-filters {
+    position: absolute;
+    inline-size: 0;
+    block-size: 0;
+  }
+
+  .band {
+    position: absolute;
+    top: calc(var(--row) * #{$band});
+    left: 0;
+    inline-size: 100cqw;
+    block-size: $band;
+    overflow: hidden;
+  }
+
+  .band.you {
+    --row: 0;
+  }
+
+  .band.deutan {
+    --row: 1;
+  }
+
+  .band.tritan {
+    --row: 2;
+  }
+
+  .band.achromat {
+    --row: 3;
+  }
+
+  // Each copy sits as far up as its band is down, so it lines up with the photo underneath.
+  .band.lens > img {
+    top: calc(var(--row) * -1 * #{$band});
+  }
+
+  .band.deutan > img {
+    filter: url(#Deuteranopia);
+  }
+
+  .band.tritan > img {
+    filter: url(#Tritanopia);
+  }
+
+  .band.achromat > img {
+    filter: url(#Achromatopsia);
+  }
+
+  // A seam of ink along the top of each lens, so the bands read as slits.
+  .band.lens::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    block-size: $seam;
+    background: $ink;
+  }
+
+  // The bands crossfade in place, slower than a fragment lands, so the colour visibly drains out of the lenses.
+  .band.fragment {
+    transition: opacity 900ms $ease-out, visibility 900ms;
+  }
+
+  .retina {
+    position: absolute;
+    top: 50%;
+    right: $safe-x;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    translate: 0 -50%;
+  }
+
+  .retina svg {
+    display: block;
+    inline-size: 18cqh;
+    block-size: 18cqh;
+    background: $ink;
+    outline: $fold-width solid $cream;
+  }
+
+  .retina figcaption {
+    @include aside;
+
+    margin: 0;
+    padding: 0.2em 0.5em;
+    background: $ink;
+    color: $cream;
+  }
+
+  > h2 {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section.over-media.lenses .band.fragment {
+    transition: opacity 240ms linear, visibility 240ms;
+  }
+}

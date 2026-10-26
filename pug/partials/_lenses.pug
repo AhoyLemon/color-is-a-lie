@@ -1,0 +1,46 @@
+//- The fruit stand's lenses and the retinas behind them. Included once, from _talk-mixins.pug.
+
+//- The three lenses, as colour matrices. Two are Machado, Oliveira and Fernandes's 2009 simulation of an eye missing one kind of cone, at full severity. The third is an eye with no working cones at all, seeing by rods alone: plain luminance, which is how simulators draw it. Filter primitives work in linear RGB by default, which is where the matrices belong. An img takes one with filter: url(#Deuteranopia), and the svg can't be display: none or Firefox drops the filters.
+mixin lensFilters()
+  svg.lens-filters(aria-hidden="true" focusable="false")
+    filter#Deuteranopia(color-interpolation-filters="linearRGB")
+      feColorMatrix(type="matrix" values="0.367322 0.860646 -0.227968 0 0  0.280085 0.672501 0.047413 0 0  -0.011820 0.042940 0.968881 0 0  0 0 0 1 0")
+    filter#Tritanopia(color-interpolation-filters="linearRGB")
+      feColorMatrix(type="matrix" values="1.255528 -0.076749 -0.178779 0 0  -0.078411 0.930809 0.147602 0 0  0.004733 0.691367 0.303900 0 0  0 0 0 1 0")
+    filter#Achromatopsia(color-interpolation-filters="linearRGB")
+      feColorMatrix(type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0")
+
+//- A drawing of a patch of retina, after Hofer et al. 2005's false-colour cone mosaics: red, green and blue cones on a jittered hexagonal grid, about 1.1 red to every green, and a few blue. Every eye draws the same patch from the same seed, so a dichromat's is the trichromat's with one kind of cone gone and its places taken by the others, which is what most dichromat retinas look like. An achromat's cones are mostly there but don't work, so they're drawn grey.
+-
+  const coneColour = { L: "#e5392b", M: "#36b54a", S: "#3b62ff", off: "#6b6b6b" }
+  const redShare = 1.1 / 2.1
+  const conePatch = (() => {
+    let seed = 2005
+    const random = () => (seed = (seed * 16807) % 2147483647) / 2147483647
+    const cones = []
+    for (let row = 0; row < 14; row++) {
+      for (let column = 0; column < 12; column++) {
+        const x = 3 + column * 9 + (row % 2) * 4.5 + (random() - 0.5) * 1.6
+        const y = 3 + row * 7.8 + (random() - 0.5) * 1.6
+        const pick = random()
+        const kind = pick < 0.08 ? "S" : pick < 0.08 + 0.92 * redShare ? "L" : "M"
+        cones.push({ x: +x.toFixed(2), y: +y.toFixed(2), kind, stand: random() < redShare ? "L" : "M" })
+      }
+    }
+    return cones
+  })()
+  // What each eye has in a cone's place. A deutan has no green cones, a tritan no blue, and an achromat's don't work.
+  const coneFor = (cone, eye) => {
+    if (eye === "achromat") return "off"
+    if (eye === "deutan" && cone.kind === "M") return "L"
+    if (eye === "tritan" && cone.kind === "S") return cone.stand
+    return cone.kind
+  }
+
+//- eye is "trichromat", "deutan", "tritan" or "achromat", and the caption goes on an ink strip beside the drawing.
+mixin retina(eye, caption)
+  figure.retina&attributes(attributes)
+    figcaption= caption
+    svg(viewBox="0 0 100 100" aria-hidden="true")
+      each cone in conePatch
+        circle(cx=cone.x cy=cone.y r="3.7" fill=coneColour[coneFor(cone, eye)])

@@ -1,22 +1,33 @@
-//- 4:00 THE LINE OF PURPLES. The yes path starts here.
+//- 4:00 THE LINE OF PURPLES. The yes path starts here, and it's the answer to the cliffhanger: purple is a color your brain invents.
 
-include ../partials/_horseshoe.pug
-
-section#good.statement(data-timing="15")
+//- The vote slide's Yes link lands here (#/good).
+section#good.over-media(data-background-image="img/parthenon.jpg" data-timing="10")
   h2 Democracy works.
-  p.aside (for now)
   aside.notes
     ul
-      li Draft line. The room voted yes.
+      li The room voted yes. Democracy works. For now.
 
-section.statement.horseshoe(data-timing="45")
-  h2 Every wavelength you can see.
-  h2.fragment(data-fragment-index="1") And a line your brain made up.
-  +horseshoe
+//- The purple beat, on three steps: the line, the bend, the fill. The three captions share one spot and swap. pug/partials/_horseshoe.pug draws it, js/purple-beat.js bends it.
+section.statement.purple-beat(data-timing="45")
+  h2.fragment.fade-out(data-fragment-index="1") Light is a line.
+  h2.fragment.fade-in-then-out(data-fragment-index="1") Your brain bends it into a horseshoe.
+  h2.fragment.fade-in(data-fragment-index="2") Then fills the gap with purple.
+  +purpleBeat
   aside.notes
     ul
-      li The answer to the cliffhanger. The horseshoe is every wavelength you can see, 380 to 700 nanometres, in order.
-      li Click: the straight edge. Its official name is the line of purples, and no single wavelength looks like anything on it.
-      li Your brain sees violet at one end and red at the other, draws a line across the gap, and makes up colors to fill it.
-      li Evidence: purple is the color your brain invents outright.
-      li If challenged: the real CIE 1931 chromaticity diagram is lopsided, and this is its idea tidied into a horseshoe. The straight edge really is officially named the line of purples.
+      li Light is a line. Every wavelength you can see, in order, violet at one end and red at the other. Past violet is ultraviolet, past red is infrared, and you can't see either.
+      li Click: your brain bends the line into a horseshoe, so violet and red end up near each other.
+      li Click: then it fills the gap with purple. Purple is your brain mixing the two ends of the line. No single wavelength looks like anything on that bar.
+      li The bar has an official name: the line of purples.
+      li If challenged: this is the idea of the CIE 1931 chromaticity diagram, tidied into a horseshoe. The real one is lopsided.
+
+//- The cliffhanger's lavender again, as an img in the slide with the same crop, so the eyedropper lines up. Pixel (1524, 1068) of img/lavender.jpg is #6f5895, hue 263, and at the bottom-anchored cover crop (scale 0.5, 267 rows hidden) it lands at 59.5cqw, 55.6cqh.
+section.over-media.full-bleed(data-timing="15")
+  img(src="img/lavender.jpg" alt="A lavender field in bloom" style="object-position: center bottom;")
+  +eyedropper(59.5, 55.6, "#6f5895", "no wavelength")(class="fragment" data-fragment-index="1")
+  h2 Your brain made that up.
+  aside.notes
+    ul
+      li Back to the lavender. Click: the eyedropper. It has a hex. It doesn't have a wavelength.
+      li Purple is your brain mixing the two ends of the line. No light anywhere is purple on its own.
+      li Evidence, and the end of the cliffhanger.

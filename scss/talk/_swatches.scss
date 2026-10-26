@@ -3,22 +3,22 @@
 
 // The swatch slides (pug/sections/_02-language.pug): paint chips, eight a slide, with the word under each chip and what the other language needs to say it under that. The chips are the point, so the type runs a step smaller than a statement's and the chips take the room. They're specimen colours, not palette, and every hex is a guess at a word that names a thing (skin, eyes, hair, sky) rather than a colour.
 $swatches: (
-  celeste: #6cace4,
-  trigueno: #c69c62,
-  zarco: #9dbdd3,
-  moreno: #9a6a45,
-  canoso: #c9c6c0,
-  bermejo: #c8693a,
-  pardo: #7d6b57,
-  amoratado: #6a4c7d,
-  teal: #008080,
-  hazel: #8e7618,
-  auburn: #a52a2a,
-  navy: #24346e,
-  taupe: #9c8b7e,
-  eggshell: #f0ead6,
-  periwinkle: #ccccff,
-  puce: #cc8899,
+  "celeste": #6cace4,
+  "trigueno": #c69c62,
+  "zarco": #9dbdd3,
+  "moreno": #9a6a45,
+  "canoso": #c9c6c0,
+  "bermejo": #c8693a,
+  "pardo": #7d6b57,
+  "amoratado": #6a4c7d,
+  "teal": #008080,
+  "hazel": #8e7618,
+  "auburn": #a52a2a,
+  "navy": #24346e,
+  "taupe": #9c8b7e,
+  "eggshell": #f0ead6,
+  "periwinkle": #ccccff,
+  "puce": #cc8899,
 );
 
 .reveal .slides section.swatches {
