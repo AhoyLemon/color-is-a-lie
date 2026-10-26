@@ -1,4 +1,4 @@
-# Your brain is dumb, color is a lie, and there's no such thing as "brown"
+# Your brain is dumb, color is a lie, and purple isn't real
 
 [![RevealJS](https://img.shields.io/badge/reveal.js-000?style=for-the-badge&labelColor=F2E142&logo=reveal.js&logoColor=111&color=222)](https://revealjs.com/)
 [![Pug](https://img.shields.io/badge/Pug-000?style=for-the-badge&labelColor=A86454&logo=pug&logoColor=white&color=222)](https://pugjs.org/)

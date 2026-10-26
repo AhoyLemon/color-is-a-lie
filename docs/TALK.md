@@ -1,6 +1,6 @@
 # Talk
 
-The working doc for *Your brain is dumb, color is a lie, and there's no such thing as "brown"*. It owns the slot, the tone, the running order, both endings, every claim and its source, and what's still open. The deck in `pug/sections/` follows it.
+The working doc for *Your brain is dumb, color is a lie, and purple isn't real*. It owns the slot, the tone, the running order, both endings, every claim and its source, and what's still open. The deck in `pug/sections/` follows it.
 
 ## The slot
 
@@ -51,11 +51,11 @@ Provisional until the first run-through against the speaker view's timer. The sl
 | 7:50 | Name, handle, URL | 0:10 | Just the lemon, centered, and the address small in mono |
 | | **Yes path** | **8:00** | |
 | 4:00 | Hola, Mexico! | 0:08 | No path, see The heel. The turn, a smash cut over Málaga at sunset from Gibralfaro |
-| 4:08 | I fixed your paella | 0:12 | Two slides with reveal's fade between them: a real paella, no caption, while the bottom was all burnt, then the same pan full of rice and hot dogs |
-| 4:20 | What is this thing? | 0:08 | Two slides, the same caption: a tortilla, then the same photo covered in ketchup. Why didn't you give me ketchup with it? |
+| 4:08 | I fixed your paella | 0:12 | A vertical stack of two slides with reveal's fade between them: a real paella, no caption, while the bottom was all burnt, then the same pan full of rice and hot dogs |
+| 4:20 | What is this thing? | 0:08 | A vertical stack of two slides: the tortilla under "What is this thing?", then the same photo covered in ketchup with no headline. Why didn't you give me ketchup with it? |
 | 4:28 | You're doing fish sticks wrong | 0:08 | Espetos at La Malagueta, with the caption on the click |
 | 4:36 | (no caption) | 0:10 | Café Central's tile chart, a big Rust X over its options on the first click, and a Big Gulp mug chucked on top on the second. "I believe you call that a Venti" |
-| 4:46 | I'm going to get some real Spanish food | 0:09 | Two slides, the same caption: on the ink first, then fading to Taco Bell at night. The Mexico mix-up pays off |
+| 4:46 | I'm going to get some real Spanish food | 0:09 | Two slides, the same caption, held still: on the ink first, then Taco Bell at night fades in behind it. The Mexico mix-up pays off |
 | 4:55 | Name, handle, URL | 0:05 | The yes path's lemon, with the address struck through on the click |
 | | **No path** | **5:00** | |
 
@@ -83,7 +83,7 @@ A thumbs-down gets about 60 seconds of pro-wrestling heel: pure heat aimed at th
 - Café Central's chart of nine coffees and a joke tenth gets a big X over the options, and an American coffee gets chucked on top: a Big Gulp mug. "I believe you call that a Venti." No caption.
 - The exit: thanks for voting me down, that means I can get out of here to get some real Spanish food. The caption lands first and Taco Bell fades in behind it on the next slide, so the photo is the punchline.
 
-Each swap (the paella, the tortilla, Taco Bell) is two slides with reveal's fade between them, so every photo is a `data-background` and bleeds to the edge of whatever screen it's on. A photo placed inside the slide stops at the 16:9 canvas.
+Each swap is two slides with a fade between them, so every photo is a `data-background` and bleeds to the edge of whatever screen it's on. A photo placed inside the slide stops at the 16:9 canvas. The paella and the tortilla are vertical stacks. Taco Bell's caption has to hold still across its two slides, so neither has a credit (a credit lifts the caption to make room for itself), and the second arrives with no transition, so only the photo fades. The heel carries no photo credits at all.
 
 Cut in the second pass: a live clock in the room's 24-hour time over "I ate at five." Not enough meat on the bone, and Lemon makes a similar joke in another deck. The chorizo is now background in the paella's notes, not a line.
 
@@ -198,7 +198,7 @@ If the yes path runs long, cut in this order:
 3. Webb's infrared band, "Shortest to purple, longest to red" (keep the spaceship)
 4. The fruit stand's lenses (keep Jupiter and "We're all colorblind.")
 
-Never cut: the thesis, the brown line (it's in the title), the cliffhanger, the vote, the spaceship.
+Never cut: the thesis, the cliffhanger (it's in the title), the vote, the spaceship.
 
 ## Open questions
 
@@ -238,3 +238,4 @@ Anything here that turns into work gets an issue and a link.
 | No 10-minute version | The prize slot doesn't matter: Lemon already speaks at Wey Wey Web |
 | One working doc | An 8-minute talk doesn't need `web-animations`' PLAN, TIMELINE and TODO |
 | English | The conferences run in English |
+| The title is *Your brain is dumb, color is a lie, and purple isn't real* | Lemon's call, on 26 October, replacing *…and there's no such thing as "brown"*. Brown shrank to one 20-second hand-wave once its demo went, and purple is what the talk is built on: the cliffhanger before the vote and the purple beat after it. It keeps the old title's three beats, and on the no path the title promises a payoff the heel never delivers |
