@@ -1,66 +1,72 @@
 //- 4:00 HEEL MODE: the no path, out by 5:00. It sits after the yes path's end slide and is reached by the vote slide's No link or the X key. The ugly American and his food crimes, one line a slide, never Trump: docs/TALK.md, The heel, has the character and the guardrail.
 
-//- The turn is a smash cut, so it lands while the room is still booing the vote. The Mexico mix-up runs through the tortilla and pays off at Taco Bell.
-section#heel.over-media.is-shout(data-background-image="img/carihuela.jpg" data-transition="none" data-timing="8")
+//- A swap (the paella, the tortilla, Taco Bell) is two slides with reveal's fade between them, so each photo is a data-background and bleeds to the edge of any screen. A caption on both slides of a pair sits in the same place, so only the photo changes.
+
+//- The turn is a smash cut, so it lands while the room is still booing the vote. The Mexico mix-up pays off at Taco Bell. Anchored to the bottom so the city fills the frame and the caption sits on the park.
+section#heel.over-media.is-shout(data-background-image="img/malaga.jpg" data-background-position="center bottom" data-transition="none" data-timing="8")
   h2 Hola, Mexico!
-  cite.credit Photo: Jl FilpoC
   aside.notes
     ul
       li The turn. Don't explain it. Become the loudest American you've ever sat next to on a plane.
       li Pure heat from here. No recanting, no color.
-      li La Carihuela, right here in Torremolinos.
+      li Málaga from up on Gibralfaro: the port, La Farola, the cathedral.
 
-section.over-media(data-background-image="img/paella-chorizo.jpg" data-timing="8")
-  h2 I fixed your paella.
-  cite.credit Photo: Ypsilon from Finland
+section.over-media(data-background-image="img/paella.jpg" data-transition="fade" data-timing="6")
   aside.notes
     ul
-      li Chorizo. Jamie Oliver tried it on 4 October 2016 and Spain still hasn't forgiven him.
-      li Also the bottom was burnt, so I sent it back. (The socarrat, the best part.)
+      li So the first day I got here I ate something called peelluh, and it was gross. The bottom was all burnt.
+      li Background, not a line: Jamie Oliver put chorizo in his on 4 October 2016, and Spain still hasn't forgiven him.
 
-section.over-media(data-background-image="img/tortilla.jpg" data-timing="8")
-  h2 This tortilla is broken.
+section.over-media(data-background-image="img/paella-hot-dogs.jpg" data-transition="fade" data-timing="6")
+  h2 I fixed your paella.
+  aside.notes
+    ul
+      li So I fixed it. All it needed was a rice cooker and hot dogs.
+
+section.over-media(data-background-image="img/tortilla.jpg" data-transition="fade" data-timing="4")
+  h2 What is this thing?
   cite.credit Photo: Tamorlan
   aside.notes
     ul
-      li It's full of potatoes. Where do the beans go?
-      li Onion or no onion? Neither. Ketchup. Both halves of the room boo at once.
+      li And while we're at it, what is this thing?
+
+section.over-media(data-background-image="img/tortilla-ketchup.jpg" data-transition="fade" data-timing="4")
+  h2 What is this thing?
+  aside.notes
+    ul
+      li And why didn't you give me ketchup with it?
 
 section.over-media(data-background-image="img/espetos.jpg" data-timing="8")
-  h2 You're doing fish sticks wrong.
-  cite.credit Photo: Diego Delso
+  h2.fragment You're doing fish sticks wrong.
   aside.notes
     ul
       li Espetos, on the beach at La Malagueta. The most Málaga food there is.
-      li In America the fish goes inside the stick. Breaded. Rectangular. Frozen. The way God intended.
+      li Click: in America the fish goes inside the stick. Breaded. Rectangular. Frozen. The way God intended.
 
-//- Café Central's tile chart, shown whole like the Ishihara plate, with the caption on one line under it so it doesn't cover a cup.
-section.over-media.portrait.is-figure.one-line(data-timing="8")
-  img(src="img/cafe-central.jpg" alt="Café Central's tile chart of the ways to order a coffee in Málaga, from solo to nube")
-  h2 Which one's a regular coffee?
-  cite.credit Photo: Daniel Capilla
+//- Café Central's tile chart. The first click draws an X over the options, and the second chucks the American coffee on top, dropping in from above. Both sit on the canvas, so on a screen that isn't 16:9 the X drifts a little off the cups, which a scrawl can take.
+section.over-media.crossed-out(data-background-image="img/cafe-central.jpg" data-timing="10")
+  .cross.fragment.custom(data-fragment-index="1" aria-hidden="true")
+  img.big-gulp.fragment.custom(src="img/big-gulp.jpg" alt="A hand holding a 7-Eleven Big Gulp mug the size of a bucket" data-fragment-index="2")
   aside.notes
     ul
       li Café Central's chart, from 1954. Nine ways to order a coffee in Málaga, and a tenth, "no me lo ponga", that means don't bother.
-      li None of them is regular. I want twenty ounces, in paper, with a lid.
+      li Click: none of these is a coffee.
+      li Click: this is a coffee. I believe you call that a Venti.
 
-//- The clock is the room's real time (js/heel-clock.js), so the line works whenever the talk lands. The 20:14 is only there until the script runs.
-section.statement.is-shout(data-timing="8")
-  h2
-    time.now 20:14
-  p I ate at five.
+//- The caption first, on the ink, then the same caption over Taco Bell.
+section.over-media(data-transition="fade" data-timing="4")
+  h2 I'm going to get some real Spanish food.
   aside.notes
     ul
-      li The clock is live. Read it out in the room's own 24-hour time and be appalled by it.
-      li That's not a time. And nobody here has even had dinner yet. What is wrong with you people?
+      li Thanks for voting me down, that means I can get out of here to get some real Spanish food.
 
-section.over-media(data-background-image="img/taco-bell.jpg" data-timing="7")
+section.over-media(data-background-image="img/taco-bell.jpg" data-transition="fade" data-timing="5")
   h2 I'm going to get some real Spanish food.
   cite.credit Photo: Anthony92931
   aside.notes
     ul
-      li Turn your back on the room. Walk.
-      li The Mexico mix-up pays off here, so don't explain it either.
+      li Taco Bell. The Mexico mix-up pays off, so don't explain it either.
+      li Then turn your back on the room.
 
 //- The heel's end: the yes path's lemon, and the address struck through on the click. The room still gets the URL. It just has to read it through a line.
 section.lemon-slide.lemon-end(data-background="#e6e924" data-timing="5")
