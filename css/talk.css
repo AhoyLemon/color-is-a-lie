@@ -98,12 +98,12 @@
 .reveal .slides section.statement.horseshoe > h2 + h2 {
   margin-top: 0.4em;
 }
-.reveal .slides section.statement.horseshoe svg.cie {
+.reveal .slides section.statement.horseshoe svg.shoe {
   position: absolute;
   top: 10cqh;
   right: 7.5cqw;
   block-size: 80cqh;
-  aspect-ratio: 940/1000;
+  aspect-ratio: 800/860;
   overflow: visible;
 }
 .reveal .slides section.statement.horseshoe .labels {
