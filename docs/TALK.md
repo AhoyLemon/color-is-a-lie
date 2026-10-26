@@ -20,7 +20,7 @@ The working doc for *Your brain is dumb, color is a lie, and there's no such thi
 
 Fast, funny, sardonic philosophy, a little optimistically nihilist. A monologue: no crowd work, no quizzes, nothing that makes the room feel like a kindergarten class.
 
-There's no spine on purpose. Each section is a tangent off the one before, and the denouement pulls them together. A tangent earns its place by surprising the room and handing off to the next one.
+The thesis comes first, said plainly: color doesn't exist. Light has a wavelength, the cones in your eyes write down three numbers, and your brain makes up the rest, so every time you name a color you're pretending something in your head is out in the world. Everything after that is evidence, and each example is less about words and more about the brain than the one before: languages disagree, the words drift, context changes the color, and the brain invents one outright. Each beat still hands off to the next, and the denouement pulls them together.
 
 The vote at minute 4 is the real structure. The first four minutes have to make the room want more, and the last beat before the vote is a cliffhanger.
 
@@ -31,11 +31,11 @@ Provisional until the first run-through against the speaker view's timer. The sl
 | Clock | Tangent | Time | Notes |
 |---|---|---|---|
 | 0:00 | Title | 0:15 | Straight in. No hello, no who-am-I |
-| 0:15 | Words that don't translate | 1:15 | Two slides of paint chips, eight words each: colors only Spanish has a word for, then only English. Ask "what does that say about us?" and leave it hanging until the denouement |
-| 1:30 | Redheads | 0:40 | Orange is named after the fruit, and English had the fruit for a century before the color. Red stretched to cover it, which is why redheads and robin redbreasts are red. Spanish files them under red too: *pelirrojo*, *petirrojo*. Hands straight to brown, which is just orange |
-| 2:10 | There's no such thing as brown | 0:20 | Hand-waved, not demoed: brown is orange in a bright room, and the proof needs a dark room and more time than the slot has. Point anyone who wants it at Technology Connections. See Decided for why the demo went |
-| 2:30 | Color doesn't exist | 1:00 | Light has a wavelength, not a color. Visible light is a sliver between infrared and ultraviolet. Three kinds of cone squash a whole spectrum into three numbers, which is the only reason screens work |
-| 3:30 | Purple isn't real | 0:20 | The cliffhanger. Violet is on the spectrum, purple isn't. Stop before saying why |
+| 0:15 | Color doesn't exist | 1:00 | The thesis. Light has a wavelength, not a color, and visible light is a sliver between infrared and ultraviolet. The cones in your eyes (not the rods, which don't see color) squash a whole spectrum into three numbers, which is the only reason screens work. Your brain makes up the rest. The opening line is the yes path's one shout |
+| 1:15 | Words that don't translate | 1:15 | Evidence that the names are ours: if color were out in the world, languages would agree on where each one starts and stops. Two slides of paint chips, eight words each: colors only Spanish has a word for, then only English. Ask "what does that say about us?" and leave it hanging until the denouement |
+| 2:30 | Redheads | 0:40 | Evidence that the words drift too. Orange is named after the fruit, and English had the fruit for a century before the color. Red stretched to cover it, which is why redheads and robin redbreasts are red. Spanish files them under red too: *pelirrojo*, *petirrojo*. Hands straight to brown, which is just orange |
+| 3:10 | There's no such thing as brown | 0:20 | Evidence that context changes the color. Hand-waved, not demoed: brown is orange in a bright room, and the proof needs a dark room and more time than the slot has. Point anyone who wants it at Technology Connections. See Decided for why the demo went |
+| 3:30 | Purple isn't real | 0:20 | The cliffhanger, and the strongest evidence before the vote: your brain invents a color no light has. Violet is on the spectrum, purple isn't. Stop before saying why |
 | 3:50 | Does democracy work? | 0:10 | The vote slide, see The vote |
 | 4:00 | The line of purples | 1:00 | Yes path. The CIE 1931 horseshoe: its curve is the spectrum, and the straight line closing it is officially called the line of purples. Your brain draws a line across the open end and makes up colors to fill it |
 | 5:00 | JWST | 1:15 | A spaceship with its own sensors, seeing light no human can. Astronomers translate it, shortest wavelengths to blue and longest to red. They do on purpose what your brain does by accident. This plants the spaceship |
@@ -87,9 +87,10 @@ Every claim the talk makes, with the line as delivered, the defence for when som
 
 | Claim | On stage | If challenged | Source |
 |---|---|---|---|
+| Your brain makes up the rest | "Every color you've ever named was your head pretending to be the world." | Color is a perception, not a property of light. Different spectra that give the same three cone responses look identical (metamers), the same light looks different colors depending on what's around it (brown), and some colors match no single wavelength at all (purple) | Fairchild, *Color Appearance Models*. Wikipedia, "Metamerism (color)" and "Line of purples" |
 | Brown is orange with context | "There's no such thing as brown. Brown is orange in a bright room." | Brown is a *related* color: it only appears next to something brighter. A dim orange light alone in the dark looks orange, never brown | Technology Connections, "Brown; color is weird" (YouTube). Fairchild, *Color Appearance Models*, on related and unrelated colors |
 | Visible light is a sliver | "You can see from about 380 to 700 nanometres. That's it." | Rough edges vary by person and brightness, but the band sits between ultraviolet and infrared | Any optics reference |
-| Three cones, three numbers | "Your eye takes an entire spectrum and writes down three numbers." | Short, medium and long cones. Different spectra that give the same three responses look identical (metamers), which is how an RGB screen fools you | Wikipedia, "Metamerism (color)", as a starting point |
+| Three cones, three numbers | "Your eye takes an entire spectrum and writes down three numbers." | Short, medium and long cones. Rods don't see color: they handle dim light, in grayscale, so say "cones", never "rods and cones". Different spectra that give the same three responses look identical (metamers), which is how an RGB screen fools you | Wikipedia, "Metamerism (color)", as a starting point |
 | Violet is real, purple isn't | "Violet is on the spectrum. Purple isn't." | Violet is a single short wavelength. Purple and magenta need light from both ends at once, so no single wavelength looks purple | Wikipedia, "Spectral color" and "Line of purples" |
 | The line of purples | "Your brain takes the spectrum, bends it into a horseshoe, and draws a line across the gap." | In the CIE 1931 chromaticity diagram, the curved edge is the spectrum and the straight edge is named the line of purples | CIE 1931. Wikipedia, "Line of purples" |
 | JWST colors are a translation | "Astronomers do on purpose what your brain does by accident." | NASA's image team calls it *representative color*: each infrared filter gets a visible color in wavelength order, shortest blue, longest red. Not one to one, and they adjust it to show the science | [Scientific American](https://www.scientificamerican.com/article/are-the-james-webb-space-telescopes-pictures-real/), [Astronomy](https://astronomy.com/science/jwst-sees-light-invisible-to-the-eye-these-scientists-decide-how-to-color-it) (*checked*) |
@@ -164,12 +165,12 @@ Tangents and lines that didn't make the run. Pull from here if something dies in
 
 If the yes path runs long, cut in this order:
 
-1. The screens half of "color doesn't exist" (keep the wavelengths)
+1. The screens aside in "color doesn't exist" (keep the wavelengths and the three numbers)
 2. The English swatch slide (keep the Spanish one)
 3. JWST's how-it-works (keep the spaceship)
 4. One of the two qualia stats
 
-Never cut: the brown line (it's in the title), the cliffhanger, the vote, the spaceship.
+Never cut: the thesis, the brown line (it's in the title), the cliffhanger, the vote, the spaceship.
 
 ## Open questions
 
@@ -192,9 +193,8 @@ Anything here that turns into work gets an issue and a link.
 
 | Decision | Rationale |
 |---|---|
-| No spine: tangents with a denouement | Lemon's call. The talk is a meditation, not an argument |
+| Thesis first: color doesn't exist, then the evidence | Lemon's call, replacing "no spine, tangents with a denouement" and "language first, then brown". Opening on vocabulary let the room file the talk under fun facts about words before it heard the claim. The examples run from words to brain, so the strongest one lands right before the vote |
 | No numbered device, like "Lie 01" | Lemon's call. Keeps the tangents loose |
-| Language first, then brown | Lemon's call over opening on brown. It starts on the room's own languages and sets up "what does that say about us?" for the denouement |
 | A monologue: no structured crowd work, no name-the-color quiz | Too much content for the time, and a quiz treats the room like a kindergarten class |
 | The swatches show words with no one-word equivalent, not basic color terms | Castilian Spanish and English basic terms mostly line up (Lillo et al. 2018), so "Spanish has no word for X" mostly isn't true at that level, and this room would know |
 | The vote slide is "Does democracy work?" with Yes and No links | The room can't tell what either answer leads to |

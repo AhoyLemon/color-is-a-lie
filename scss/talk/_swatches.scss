@@ -1,7 +1,7 @@
 @use "../lemon/abstracts/variables" as *;
 @use "../lemon/abstracts/mixins" as *;
 
-// The swatch slides (pug/sections/_01-language.pug): paint chips, eight a slide, with the word under each chip and what the other language needs to say it under that. The chips are specimen colours, not palette, and every hex is a guess at a word that names a thing (skin, eyes, hair, sky) rather than a colour.
+// The swatch slides (pug/sections/_02-language.pug): paint chips, eight a slide, with the word under each chip and what the other language needs to say it under that. The chips are specimen colours, not palette, and every hex is a guess at a word that names a thing (skin, eyes, hair, sky) rather than a colour.
 $swatches: (
   celeste: #6cace4,
   trigueno: #c69c62,
