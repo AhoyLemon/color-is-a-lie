@@ -106,7 +106,7 @@ Inside a slide, sizes are `cqw`/`cqh` or `em`, never px or `vw`/`vh`.
 
 `js/reveal-config.js` holds `Reveal.initialize({...})`: only the options that differ from reveal's defaults, plus the plugins (Markdown, Highlight, Notes, Zoom). LEMON-DECK.md says which ones the deck relies on.
 
-Three scripts load before the config: `js/line-numbers.js` gives every code block line numbers before reveal reads it, `js/stacks.js` hands a stack's `data-timing` and `data-spine` to its slides, and `js/arrivals.js` slides the spine (and a Blank Metal split's white side) in when you arrive from a slide without one. This talk adds a fourth, `js/purple-beat.js`, which bends the purple beat's spectrum from a line into a horseshoe on its first click. It listens on `.reveal` like `arrivals.js`.
+Three scripts load before the config: `js/line-numbers.js` gives every code block line numbers before reveal reads it, `js/stacks.js` hands a stack's `data-timing` and `data-spine` to its slides, and `js/arrivals.js` slides the spine (and a Blank Metal split's white side) in when you arrive from a slide without one. This talk adds two more: `js/purple-beat.js`, which bends the purple beat's spectrum from a line into a horseshoe on its first click and listens on `.reveal` like `arrivals.js`, and `js/heel-clock.js`, which keeps the heel's clock on the room's real time.
 
 ### Vendored reveal.js
 

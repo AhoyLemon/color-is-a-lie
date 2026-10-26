@@ -50,7 +50,14 @@ Provisional until the first run-through against the speaker view's timer. The sl
 | 7:40 | You're at a party | 0:10 | The closer, over Holi in Nandgaon: "You're at a party.", then on the click its subhead, "Go ask someone what they see." |
 | 7:50 | Name, handle, URL | 0:10 | Just the lemon, centered, and the address small in mono |
 | | **Yes path** | **8:00** | |
-| 4:00 | Heel mode | 1:00 | No path, see The heel |
+| 4:00 | Hola, Mexico! | 0:08 | No path, see The heel. The turn, a smash cut over La Carihuela in Torremolinos |
+| 4:08 | I fixed your paella | 0:08 | Chorizo, like Jamie Oliver in 2016. The socarrat goes back as burnt |
+| 4:16 | This tortilla is broken | 0:08 | Where do the beans go? On onion: ketchup |
+| 4:24 | You're doing fish sticks wrong | 0:08 | Espetos at La Malagueta |
+| 4:32 | Which one's a regular coffee? | 0:08 | Café Central's tile chart, shown whole like the Ishihara plate |
+| 4:40 | I ate at five | 0:08 | A live clock in the room's 24-hour time (`js/heel-clock.js`), with "I ate at five." under it |
+| 4:48 | I'm going to get some real Spanish food | 0:07 | Taco Bell at night. The Mexico mix-up pays off |
+| 4:55 | Name, handle, URL | 0:05 | The yes path's lemon, with the address struck through on the click |
 | | **No path** | **5:00** | |
 
 ## The vote
@@ -68,15 +75,21 @@ A thumbs-down gets about 60 seconds of pro-wrestling heel: pure heat aimed at th
 
 **Who the heel is:** the ugly American. Small-minded, arrogant, loud-mouthed, brash, and incurious about any country but his own.
 
-**What the heat is about:** food crimes, and the heel's own incuriosity. First drafts, Lemon's to sharpen or kill:
+**What the heat is about:** food crimes, and the heel's own incuriosity, as one line a slide over a photo, so the heel tells on himself every time. It's built as a first draft, Lemon's to sharpen or kill, and The run has it slide by slide:
 
-- chorizo in the paella
-- taking a side on onion in the tortilla, loudly
-- dinner at ten at night
-- sardines on a stick
-- asking for "a regular coffee"
+- "Hola, Mexico!" over La Carihuela, as a smash cut. The Mexico mix-up is the running gag. It comes back in the tortilla ("where do the beans go?") and pays off when he leaves for Taco Bell.
+- Chorizo in the paella, which Jamie Oliver really did, and sending the socarrat back because the bottom was burnt.
+- The tortilla is broken because it's full of potatoes. On onion, the heel takes neither side and says ketchup, so the whole room boos instead of half of it.
+- Espetos are fish sticks done wrong: the fish is supposed to go inside the stick.
+- Café Central's chart, with nine ways to order a coffee and a joke tenth, and not one of them is regular.
+- Dinner at ten, as a live clock in the room's 24-hour time, which the heel won't accept is a time, over "I ate at five."
+- Then the exit: he's off to Taco Bell for some real Spanish food.
+
+Eight slides in a minute is tight, about eight seconds each. If it runs long in rehearsal, the coffee goes first, then the clock.
 
 **The guardrail:** nothing that puts Donald Trump in anyone's mind. No MAGA cadence, slogans, hats, walls or tariffs, and no flag-waving that reads that way. In 2026 that character is too real to be funny, and it's the one thing that would turn the room for real.
+
+The Mexico mix-up stays on the right side of that line by being ignorance, not hostility: the heel can't tell Spain from Mexico, and he loves Taco Bell. Nothing about the border, immigration or Mexicans themselves, which is where it would start to sound like him.
 
 Also off the table: the Spanish flag, Catalonia, Franco, bullfighting, and anything about the Andalusian accent or "lazy south" stereotypes. Those are real fights in Spain, not cheap heat, and some of them land on a prejudice people in Málaga already get from the rest of the country.
 
@@ -112,6 +125,8 @@ Every claim the talk makes, with the line as delivered, the defence for when som
 | Redheads are fossils | "That's why redheads are red. So are robin redbreasts." | Red for hair is late Old English, "redhead" is 1256 (as a surname), "redbreast" about 1400. Red was a broader category then (Old English even called gold *rēad*), and the label stuck. When English made new hair words it picked "carroty" and "ginger", never orange. Red fox (1742) and red squirrel (1682) came after orange existed, so never use them | [Etymonline, "redhead"](https://www.etymonline.com/word/redhead), [Etymonline, "redbreast"](https://www.etymonline.com/word/redbreast), [Merriam-Webster, "red fox"](https://www.merriam-webster.com/dictionary/red%20fox), [Language Hat](https://languagehat.com/gingernut/) (*checked*, Etymonline through search snippets) |
 | Spanish files them under red too | "*Pelirrojo, petirrojo.* The RAE defines red hair as a very bright blond." | Not because Spanish lacked the word: *naranjado* is from 1351 and *anaranjado* from 1484. *Rojo* only took over from *bermejo* as the main red in the 15th century. *Petirrojo* is *peto* (bib) plus *rojo*. The DLE gives *rojo*, of hair, as "de un rubio muy vivo" | [DLE, "rojo"](https://dle.rae.es/rojo), [RAE historical dictionary, "naranjado"](https://www.rae.es/dhle/naranjado), [Wiktionary, "petirrojo"](https://en.wiktionary.org/wiki/petirrojo). The DLE and RAE points came through search snippets, so check the *rojo* entry before saying the blond line. On stage a redhead is a *pelirrojo* or *pelirroja*, and the hair is *pelirrojo* or *pelo rojo*. Never call a person "un rojo" or "una roja": in Spain that means a leftie, a commie (the RAE lists it), and it's loaded |
 | Christina Hendricks is a natural blonde | "Christina Hendricks is a natural blonde. She's dyed it red since she was about ten. The RAE was right." | She's said so herself, more than once: naturally blonde, red from about age ten. If giving a reason, say "she says": she's credited Anne of Green Gables in one interview and Ann-Margret and Lucille Ball in another, and called herself dark blonde in one and light blonde in another | [Fox News, syndicating a 2012 Daily Mail interview](https://www.foxnews.com/entertainment/christina-hendricks-admits-shes-a-natural-blonde-who-is-hollywoods-hottest-redhead), [Marie Claire, 2015](https://www.marieclaire.com/beauty/news/a13723/christina-hendricks-goes-blonde) (*checked* 26 October, Marie Claire through search excerpts) |
+| Jamie Oliver put chorizo in a paella | "Jamie Oliver tried it on 4 October 2016 and Spain still hasn't forgiven him." Heel, in the notes | He tweeted a chicken and chorizo paella as his recipe of the day on 4 October 2016, and Spanish Twitter called it an abomination. He stood by it | [The Local](https://www.thelocal.es/20161005/jamie-oliver-messed-with-paella-and-spain-didnt-like-it/), [CBC](https://amp.cbc.ca/news/entertainment/jamie-oliver-social-media-1.3792196) (*checked* 26 October, through search) |
+| Café Central's coffee chart | "Nine ways to order a coffee in Málaga, and a tenth that means don't bother." Heel, in the notes | José Prado Crespo, who owned Café Central on the Plaza de la Constitución, named the mixes in 1954, because customers were vague about how much coffee and milk they wanted and both were scarce: solo, largo, semilargo, solo corto, mitad, entrecorto, corto, sombra and nube. *No me lo ponga* filled the last tile as a joke. The café has since closed, and the photo is of a hand-made reproduction | The plaque under the reproduction, [Spanish Sabores](https://spanishsabores.com/how-to-order-a-coffee-in-malaga/), [elDiario.es](https://www.eldiario.es/economia/cierra-central-centenario-bar-inventor-formas-pedir-cafe_1_8639522.html) (*checked* 26 October, through search) |
 | Spanish and English mostly agree | Drives the swatch slides, never said outright | Castilian Spanish basic color terms line up with English almost one to one. *Celeste* is a basic color only in Uruguay. *Marrón* (Spain) and *café* (Mexico) name the same category, as do *morado* and *violeta* | [Lillo et al. 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC5968181) (*checked*) |
 
 **Avoid on stage:**
@@ -194,8 +209,8 @@ Anything here that turns into work gets an issue and a link.
 | What's the screen? Ask info@weyweyweb.com about the projector or TV, the input, the aspect ratio, and whether there's a clicker. A washed-out projector kills subtle color comparisons, so the slides lean on big contrasts | The slot | |
 | Does the clock stop for the vote? If not, the yes path loses however long the vote takes | The run | |
 | Check the swatch words with a native speaker from Spain | Swatch candidates | |
-| Write the heel | `pug/sections/_09-heel.pug` | |
-| Does the heel's last slide give the URL, or does the room not deserve it? | `pug/sections/_09-heel.pug` | |
+| Sharpen the heel's first draft, and time it against the speaker view: eight slides in a minute | `pug/sections/_09-heel.pug` | [#3](https://github.com/AhoyLemon/color-is-a-lie/issues/3) |
+| The heel's last slide gives the URL and strikes it through on the click, so the room can still read it. Keep that, or does the room not deserve it at all? | `pug/sections/_09-heel.pug` | |
 | A sound sting for the heel? Depends on venue audio | The heel | |
 | Ask the organizers to rig the vote so Lemon loses? Assumed not | The vote | |
 | Every slide has its image now. Check the yes path's on the projector: the cone mosaic insets are small crops (180 and 286 px wide) and will look soft | `pug/sections/_07-your-green.pug` | [#3](https://github.com/AhoyLemon/color-is-a-lie/issues/3) |
