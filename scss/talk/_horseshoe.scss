@@ -1,0 +1,32 @@
+@use "../lemon/abstracts/variables" as *;
+
+// The line of purples slide (pug/sections/_05-line-of-purples.pug): the CIE 1931 horseshoe from pug/partials/_horseshoe.pug, filling the right of the canvas, with the two statements hung on the left beside it. The diagram is the biggest thing on the slide, so the statements drop to heading size. Its strokes and label sizes are SVG presentation attributes, in viewBox units.
+
+.reveal .slides section.statement.horseshoe {
+  > h2 {
+    font-size: $step-heading;
+  }
+
+  > h2 + h2 {
+    margin-top: 0.4em;
+  }
+
+  svg.cie {
+    position: absolute;
+    top: $safe-y;
+    right: $safe-x;
+    block-size: 80cqh;
+    aspect-ratio: 940 / 1000;
+    overflow: visible;
+  }
+
+  .labels {
+    fill: $text-quiet;
+    font-family: $font-mono;
+  }
+
+  .name {
+    fill: $text;
+    font-family: $font-mono;
+  }
+}

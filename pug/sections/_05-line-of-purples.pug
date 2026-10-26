@@ -1,5 +1,7 @@
 //- 4:00 THE LINE OF PURPLES. The yes path starts here.
 
+include ../partials/_horseshoe.pug
+
 section#good.statement(data-timing="15")
   h2 Democracy works.
   p.aside (for now)
@@ -7,9 +9,13 @@ section#good.statement(data-timing="15")
     ul
       li Draft line. The room voted yes.
 
-+gag("The CIE 1931 chromaticity diagram: the spectrum bent into a horseshoe, with the line of purples drawn across the gap.")(data-timing="45")
-  h2 The line of purples.
+section.statement.horseshoe(data-timing="45")
+  h2 Every wavelength you can see.
+  h2.fragment(data-fragment-index="1") And a line your brain made up.
+  +horseshoe
   aside.notes
     ul
-      li The curve is the spectrum. The straight edge is officially named the line of purples.
-      li Your brain draws a line across the open end and makes up colors to fill it.
+      li The answer to the cliffhanger. The curve is every single wavelength, 380 to 700 nanometres, plotted by how your cones respond. CIE 1931.
+      li Click: the straight edge. Its official name is the line of purples, and no single wavelength looks like anything on it.
+      li Your brain sees violet at one end and red at the other, draws a line across the gap, and makes up colors to fill it.
+      li Evidence: purple is the color your brain invents outright.

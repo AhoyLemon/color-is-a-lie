@@ -37,7 +37,7 @@ Provisional until the first run-through against the speaker view's timer. The sl
 | 3:10 | There's no such thing as brown | 0:20 | Evidence that context changes the color. Hand-waved, not demoed: brown is orange in a bright room, and the proof needs a dark room and more time than the slot has. Point anyone who wants it at Technology Connections. See Decided for why the demo went |
 | 3:30 | Purple isn't real | 0:20 | The cliffhanger, and the strongest evidence before the vote: your brain invents a color no light has. Violet is on the spectrum, purple isn't. Stop before saying why |
 | 3:50 | Does democracy work? | 0:10 | The vote slide, see The vote |
-| 4:00 | The line of purples | 1:00 | Yes path. The CIE 1931 horseshoe: its curve is the spectrum, and the straight line closing it is officially called the line of purples. Your brain draws a line across the open end and makes up colors to fill it |
+| 4:00 | The line of purples | 1:00 | Yes path. The CIE 1931 horseshoe: its curve is the spectrum, and the straight line closing it is officially called the line of purples. Your brain draws a line across the open end and makes up colors to fill it. On the slide: the curve alone ("Every wavelength you can see."), then one click brings the line of purples and "And a line your brain made up." The diagram is an inline SVG plotted from the CIE 1931 table (`pug/partials/_horseshoe.pug`) |
 | 5:00 | JWST | 1:15 | A spaceship with its own sensors, seeing light no human can. Astronomers translate it, shortest wavelengths to blue and longest to red. They do on purpose what your brain does by accident. This plants the spaceship |
 | 6:15 | Your green isn't my green | 1:00 | Qualia, with data: people whose cone ratios differ more than tenfold still agree on yellow, and statistically some of the men in the room are colorblind |
 | 7:15 | Denouement | 0:35 | The spaceship, see The denouement |
@@ -185,7 +185,7 @@ Anything here that turns into work gets an issue and a link.
 | Does the heel's last slide give the URL, or does the room not deserve it? | `pug/sections/_09-heel.pug` | |
 | A sound sting for the heel? Depends on venue audio | The heel | |
 | Ask the organizers to rig the vote so Lemon loses? Assumed not | The vote | |
-| Visuals: the CIE horseshoe, Hubble vs Webb Pillars of Creation (ESA/Webb images are CC BY 4.0, so credit them). The brown demo is dropped, see Decided | `+gag` placeholders | [#3](https://github.com/AhoyLemon/color-is-a-lie/issues/3) |
+| Visuals: Hubble vs Webb Pillars of Creation (ESA/Webb images are CC BY 4.0, so credit them). The swatches and the CIE horseshoe are built, and the brown demo is dropped, see Decided | `+gag` placeholders | [#3](https://github.com/AhoyLemon/color-is-a-lie/issues/3) |
 | Check the DLE's *rojo* entry ("de un rubio muy vivo") before saying the blond line | Claims | |
 | Check every claim not marked *checked* | Claims | |
 
