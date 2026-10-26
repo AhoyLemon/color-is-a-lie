@@ -1,13 +1,14 @@
 @use "../lemon/abstracts/variables" as *;
 @use "../lemon/abstracts/mixins" as *;
 
-// The swatch slides (pug/sections/_02-language.pug): paint chips, eight a slide, with the word under each chip and what the other language needs to say it under that. The chips are specimen colours, not palette, and every hex is a guess at a word that names a thing (skin, eyes, hair, sky) rather than a colour.
+// The swatch slides (pug/sections/_02-language.pug): paint chips, eight a slide, with the word under each chip and what the other language needs to say it under that. The chips are the point, so the type runs a step smaller than a statement's and the chips take the room. They're specimen colours, not palette, and every hex is a guess at a word that names a thing (skin, eyes, hair, sky) rather than a colour.
 $swatches: (
   celeste: #6cace4,
   trigueno: #c69c62,
   zarco: #9dbdd3,
   moreno: #9a6a45,
   canoso: #c9c6c0,
+  bermejo: #c8693a,
   pardo: #7d6b57,
   amoratado: #6a4c7d,
   teal: #008080,
@@ -20,37 +21,34 @@ $swatches: (
   puce: #cc8899,
 );
 
-// Blanquiazul is two colours in one word, so its chip is Málaga CF's stripes.
-$malaga-white: #fff;
-$malaga-blue: #1d5fae;
-$malaga-stripe: 2.5cqw;
-
 .reveal .slides section.swatches {
+  --slide-pad-y: 8cqh;
+
   align-content: start;
-  row-gap: 4cqh;
+  row-gap: 3cqh;
 
   > h2 {
-    font-size: $step-heading;
+    font-size: $step-lead;
   }
 
   dl {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 3.5cqh $gap;
+    gap: 2.5cqh $gap;
     margin: 0;
 
     // The hairline keeps the darkest chips (navy, amoratado) from sinking into the ground.
     > div::before {
       content: "";
       display: block;
-      block-size: 13cqh;
+      block-size: 19cqh;
       margin-bottom: 0.45em;
       outline: $fold-width solid $code-frame;
     }
   }
 
   dt {
-    font-size: $step-lead;
+    font-size: $step-body;
     font-weight: 600;
     line-height: 1.1;
   }
@@ -65,9 +63,5 @@ $malaga-stripe: 2.5cqw;
     .#{$name}::before {
       background: $colour;
     }
-  }
-
-  .blanquiazul::before {
-    background: repeating-linear-gradient(90deg, $malaga-white 0 $malaga-stripe, $malaga-blue $malaga-stripe 2 * $malaga-stripe);
   }
 }

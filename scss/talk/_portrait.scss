@@ -22,3 +22,9 @@
     z-index: 1;
   }
 }
+
+// A figure from a paper is shown whole, not cropped to fill the half.
+.reveal .slides section.over-media.portrait.is-figure > img {
+  object-fit: contain;
+  object-position: center;
+}
