@@ -2,7 +2,7 @@
 
 How every Lemon talk deck looks and moves, and how to build slides in it.
 
-[`DESIGN.md`](../DESIGN.md) is the visual contract (tokens, rules, recorded exceptions) for both the deck and the demos. This file is the working guide: where things live, which template to reach for, and the traps. [`pug/examples/_example-slides.pug`](../pug/examples/_example-slides.pug) is the catalogue, with every template in it.
+[`DESIGN.md`](../DESIGN.md) is the visual contract (tokens, rules, recorded exceptions) for both the deck and the demos. This file is the working guide: where things live, which template to reach for, and the traps. [`pug/examples/_example-slides.pug`](../pug/examples/_example-slides.pug) is the catalogue, with every template in it except the ones the shared sections already show (`.hello`, the `.bm` slides, `.thanks`, the lemon slide), which live in `pug/sections/shared/`.
 
 ## Lemon owns defaults, the talk owns its own surfaces
 
@@ -41,9 +41,9 @@ The exceptions are numbers that aren't sizes: a demo iframe keeps the CSS-pixel 
 
 ## Colour
 
-The palette is Ink, Cream, Focus Yellow, Rust, Mustard and Wheat, as `--lemon-*` custom properties on `:root`. Templates never read a palette name directly; they read roles: `--lemon-ground`, `--lemon-text`, `--lemon-text-quiet`, `--lemon-line`, `--lemon-touch`, `--lemon-field`, `--lemon-on-field`, `--lemon-fold`, `--lemon-spine-ground`, `--lemon-code-surface`, `--lemon-code-frame`.
+The palette is Ink, Cream, Focus Yellow, Rust, Mustard and Wheat, as `--lemon-*` custom properties on `:root`. Most surfaces read roles, not palette names: `--lemon-ground`, `--lemon-text`, `--lemon-text-quiet`, `--lemon-line`, `--lemon-touch`, `--lemon-field`, `--lemon-on-field`, `--lemon-surface`, `--lemon-fold`, `--lemon-spine-ground`, `--lemon-spine-text`, `--lemon-code-surface`, `--lemon-code-frame`. A few fixed pieces read the palette directly, so retuning a role doesn't move them: over-media's Cream and Ink strips, the Mustard metric name, Q&A labels and quote mark, the lemon slide's and the Blank Metal slides' Ink, `.fragment.mark`, the gag placeholder and the code syntax palette.
 
-A talk retunes by redeclaring any of these on `:root` in its own `talk.scss`:
+A talk retunes by redeclaring any of these on `:root` in its own styles (a partial in `scss/talk/`, or `talk.scss` itself while it's still small):
 
 ```scss
 :root {
@@ -105,7 +105,7 @@ The card's label gets no `data-id` on purpose: reveal's auto-animate morphs boxe
 
 ## Templates
 
-Each template is a class on the `section`. A slide with no template class still gets the canvas: content down the left edge, centred vertically. The catalogue shows every one, with alternates stacked under it.
+Each template is a class on the `section`. A slide with no template class still gets the canvas: content down the left edge, centred vertically. The catalogue shows every one except the shared sections' own, with alternates stacked under it.
 
 | Class | Use it for | Notes |
 |---|---|---|
@@ -117,7 +117,7 @@ Each template is a class on the `section`. A slide with no template class still 
 | `+demo("file.html", w, h)` | A live demo | Builds its own `section.demo`; the iframe keeps its own frame and scales as one piece to fit beside the spine (or the whole canvas, without one) |
 | `.over-media` | A photo, GIF or video owning the canvas | Put the media in a reveal `data-background-*`. The heading rides on a cream strip low on the left; a `p` rides on an ink strip. `.thanks` sets the heading in Yrsa. |
 | `+gag("description")` | A visual gag whose asset you haven't found yet | A loud dashed placeholder in the over-media layout. Swap the asset in as the slide's `data-background-*` and drop the mixin. |
-| `dl.metric` | A term worth defining | The term in Yrsa at billing scale, its name in Mustard, one line of meaning |
+| `dl.metric` | A term worth defining | `dt` is the term in Yrsa at billing scale, `dd.metric-name` its name in Mustard, and a plain `dd` one line of meaning |
 | `.q-and-a` | The questions people actually ask | `dt` with `strong Q:`, `dd` with `strong A:` |
 | `ul.links` | Resources | `strong` for what it is, then an ordinary link (`a` or `+link`) for where it lives |
 | `.bm`, `.bm-hello`, `.bm-split` | The Blank Metal intro in `pug/sections/shared/_blank-metal.pug` | `+bmLogo` draws the stacked _M logo inline; on `.bm-hello` it ignites a beat after arrival. `.bm-split` puts a 40cqw ink panel beside `.bm-content` on white, which slides in from the right. `.bm-label` (with a `data-id`) holds still across them; `.bm-role` is a quiet line before a heading; `ul.bm-hands` bullets are metal hands that nod as they land. |
@@ -161,4 +161,4 @@ Each template is a class on the `section`. A slide with no template class still 
 
 ## Using the catalogue
 
-A fresh talk starts with the catalogue as its content: `pug/index.pug` includes `pug/examples/_example-slides.pug` between the shared intro and outro. Each family in `pug/examples/catalogue/` is one vertical stack that opens with a divider and carries its name (and the current subsection) on the spine; walk down a stack to see each template and its alternates. Each slide's notes name the class and the partial that styles it. Copy what you need into your own files in `pug/sections/`, then swap the catalogue's include for yours. When you add a template to Lemon, add it to the catalogue in the same commit.
+A fresh talk starts with the catalogue as its content: the template's `pug/index.pug` includes `pug/examples/_example-slides.pug` between the shared intro and outro. This talk has swapped it for its own sections, so to browse the catalogue, include it in `pug/index.pug` for a moment. Each family in `pug/examples/catalogue/` is one vertical stack that opens with a divider and carries its name (and the current subsection) on the spine; walk down a stack to see each template and its alternates. Each slide's notes name the class and the partial that styles it. Copy what you need into your own files in `pug/sections/`, then swap the catalogue's include for yours. When you add a template to Lemon, add it to the catalogue in the same commit.
