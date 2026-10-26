@@ -1,4 +1,4 @@
-//- 0:00 TITLE, then 0:15 WORDS THAT DON'T TRANSLATE. Straight in: no hello, no who-am-I. docs/TALK.md has the run.
+//- 0:00 TITLE, then 0:15 WORDS THAT DON'T TRANSLATE, then 1:30 REDHEADS. Straight in: no hello, no who-am-I. docs/TALK.md has the run.
 
 section.cover(data-timing="15")
   p.a-talk-by a talk by #{authorHandle}
@@ -7,18 +7,75 @@ section.cover(data-timing="15")
     ul
       li Straight in. Every second before 4:00 counts toward the vote.
 
-+gag("Swatches for colors only Spanish has a word for: trigueño, zarco, güero, celeste. Unverified, see docs/TALK.md, Swatch candidates.")(data-timing="30")
+//- Paint chips: the colour, its word, and what the other language needs to say it. Eight a slide, four by two. The hex values are guesses, in scss/talk/_swatches.scss.
+section.swatches(data-timing="30")
   h2 Only in Spanish
+  dl
+    .celeste
+      dt(lang="es") celeste
+      dd sky blue
+    .trigueno
+      dt(lang="es") trigueño
+      dd wheat-colored, of skin or hair
+    .zarco
+      dt(lang="es") zarco
+      dd light blue, of eyes
+    .moreno
+      dt(lang="es") moreno
+      dd tanned, or dark-haired
+    .canoso
+      dt(lang="es") canoso
+      dd gray-haired
+    .blanquiazul
+      dt(lang="es") blanquiazul
+      dd white-and-blue (Málaga CF)
+    .pardo
+      dt(lang="es") pardo
+      dd gray-brown, like every cat at night
+    .amoratado
+      dt(lang="es") amoratado
+      dd purple, of bruises and cold lips
   aside.notes
     ul
-      li Colors of particular things: skin, eyes, hair, water.
-      li Check every word with a native speaker from Spain before it ships.
+      li Colors of particular things: skin, eyes, hair, sky. English needs a phrase for every one.
+      li Read three or four. The rest make the point by being there.
+      li Moreno is what everyone on the beach out there is trying to get.
+      li Blanquiazul: Spanish welds two colors into one word. Málaga CF's colors.
+      li Pardo: Spanish says every cat at night is pardo. English says they're all gray.
+      li Unverified: check every word with a native speaker from Spain before it ships.
 
-+gag("Swatches for colors only English has a word for: teal, hazel, auburn, tan, periwinkle. Unverified, see docs/TALK.md, Swatch candidates.")(data-timing="30")
+section.swatches(data-timing="30")
   h2 Only in English
+  dl
+    .teal
+      dt teal
+      dd(lang="es") verde azulado
+    .hazel
+      dt hazel
+      dd(lang="es") color avellana
+    .auburn
+      dt auburn
+      dd(lang="es") castaño rojizo
+    .navy
+      dt navy
+      dd(lang="es") azul marino
+    .taupe
+      dt taupe
+      dd(lang="es") gris topo
+    .eggshell
+      dt eggshell
+      dd(lang="es") blanco cáscara de huevo
+    .periwinkle
+      dt periwinkle
+      dd(lang="es") azul pervinca
+    .puce
+      dt puce
+      dd(lang="es") color pulga
   aside.notes
     ul
-      li Spanish needs two words for most of these.
+      li Spanish needs two words for every one of these. Eggshell takes four.
+      li Taupe is French for mole, and topo is Spanish for mole. Puce is French for flea, and half the English speakers here don't know it either.
+      li Unverified, azul pervinca and color pulga most of all.
 
 section.statement(data-timing="15")
   h2 What does that say about us?
@@ -26,3 +83,30 @@ section.statement(data-timing="15")
   aside.notes
     ul
       li Leave it hanging. The denouement answers it.
+
+//- 1:30 REDHEADS: orange is barely a word, which hands straight to brown. docs/TALK.md, Claims, has the dates.
+section.statement(data-timing="15")
+  h2 Orange is named after the fruit.
+  p English had the fruit for a century before anyone called a color orange.
+  aside.notes
+    ul
+      li The fruit is in English by about 1380. The first "orenge colour" is in Elizabeth of York's wardrobe accounts in 1502.
+      li Before that, red stretched to cover it.
+
+section.statement(data-timing="15")
+  h2 That's why redheads are red.
+  p.aside.fragment (so are robin redbreasts. they're fossils.)
+  aside.notes
+    ul
+      li Red for hair is late Old English, and "redhead" goes back to 1256.
+      li Never say red fox or red squirrel: both were named after orange existed.
+
+section.statement(data-timing="10")
+  h2 Spanish files them under red too.
+  p(lang="es") pelirrojo, petirrojo
+  p.aside.fragment (the RAE defines red hair as "a very bright blond")
+  aside.notes
+    ul
+      li Don't say Spanish lacked the word. It had naranjado by 1351.
+      li Petirrojo is peto (bib) plus rojo, not pecho.
+      li Check the DLE's entry for rojo before saying the blond line. It came from a search snippet.

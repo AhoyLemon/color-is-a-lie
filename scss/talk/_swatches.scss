@@ -1,0 +1,73 @@
+@use "../lemon/abstracts/variables" as *;
+@use "../lemon/abstracts/mixins" as *;
+
+// The swatch slides (pug/sections/_01-language.pug): paint chips, eight a slide, with the word under each chip and what the other language needs to say it under that. The chips are specimen colours, not palette, and every hex is a guess at a word that names a thing (skin, eyes, hair, sky) rather than a colour.
+$swatches: (
+  celeste: #6cace4,
+  trigueno: #c69c62,
+  zarco: #9dbdd3,
+  moreno: #9a6a45,
+  canoso: #c9c6c0,
+  pardo: #7d6b57,
+  amoratado: #6a4c7d,
+  teal: #008080,
+  hazel: #8e7618,
+  auburn: #a52a2a,
+  navy: #24346e,
+  taupe: #9c8b7e,
+  eggshell: #f0ead6,
+  periwinkle: #ccccff,
+  puce: #cc8899,
+);
+
+// Blanquiazul is two colours in one word, so its chip is Málaga CF's stripes.
+$malaga-white: #fff;
+$malaga-blue: #1d5fae;
+$malaga-stripe: 2.5cqw;
+
+.reveal .slides section.swatches {
+  align-content: start;
+  row-gap: 4cqh;
+
+  > h2 {
+    font-size: $step-heading;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.5cqh $gap;
+    margin: 0;
+
+    // The hairline keeps the darkest chips (navy, amoratado) from sinking into the ground.
+    > div::before {
+      content: "";
+      display: block;
+      block-size: 13cqh;
+      margin-bottom: 0.45em;
+      outline: $fold-width solid $code-frame;
+    }
+  }
+
+  dt {
+    font-size: $step-lead;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  dd {
+    @include aside;
+
+    margin: 0.3em 0 0;
+  }
+
+  @each $name, $colour in $swatches {
+    .#{$name}::before {
+      background: $colour;
+    }
+  }
+
+  .blanquiazul::before {
+    background: repeating-linear-gradient(90deg, $malaga-white 0 $malaga-stripe, $malaga-blue $malaga-stripe 2 * $malaga-stripe);
+  }
+}

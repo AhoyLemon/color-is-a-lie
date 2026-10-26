@@ -1,3 +1,85 @@
+.reveal .slides section.swatches {
+  align-content: start;
+  row-gap: 4cqh;
+}
+.reveal .slides section.swatches > h2 {
+  font-size: 1.25em;
+}
+.reveal .slides section.swatches dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.5cqh 2.5cqw;
+  margin: 0;
+}
+.reveal .slides section.swatches dl > div::before {
+  content: "";
+  display: block;
+  block-size: 13cqh;
+  margin-bottom: 0.45em;
+  outline: 0.16cqw solid var(--lemon-code-frame);
+}
+.reveal .slides section.swatches dt {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.reveal .slides section.swatches dd {
+  color: var(--lemon-text-quiet);
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6em;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  margin: 0.3em 0 0;
+}
+.reveal .slides section.swatches .celeste::before {
+  background: #6cace4;
+}
+.reveal .slides section.swatches .trigueno::before {
+  background: #c69c62;
+}
+.reveal .slides section.swatches .zarco::before {
+  background: #9dbdd3;
+}
+.reveal .slides section.swatches .moreno::before {
+  background: #9a6a45;
+}
+.reveal .slides section.swatches .canoso::before {
+  background: #c9c6c0;
+}
+.reveal .slides section.swatches .pardo::before {
+  background: #7d6b57;
+}
+.reveal .slides section.swatches .amoratado::before {
+  background: #6a4c7d;
+}
+.reveal .slides section.swatches .teal::before {
+  background: #008080;
+}
+.reveal .slides section.swatches .hazel::before {
+  background: #8e7618;
+}
+.reveal .slides section.swatches .auburn::before {
+  background: #a52a2a;
+}
+.reveal .slides section.swatches .navy::before {
+  background: #24346e;
+}
+.reveal .slides section.swatches .taupe::before {
+  background: #9c8b7e;
+}
+.reveal .slides section.swatches .eggshell::before {
+  background: #f0ead6;
+}
+.reveal .slides section.swatches .periwinkle::before {
+  background: #ccccff;
+}
+.reveal .slides section.swatches .puce::before {
+  background: #cc8899;
+}
+.reveal .slides section.swatches .blanquiazul::before {
+  background: repeating-linear-gradient(90deg, #fff 0 2.5cqw, #1d5fae 2.5cqw 5cqw);
+}
+
 .reveal .slides section.vote .answers {
   display: flex;
   column-gap: 1.5em;

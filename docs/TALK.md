@@ -31,8 +31,9 @@ Provisional until the first run-through against the speaker view's timer. The sl
 | Clock | Tangent | Time | Notes |
 |---|---|---|---|
 | 0:00 | Title | 0:15 | Straight in. No hello, no who-am-I |
-| 0:15 | Words that don't translate | 1:15 | A slide of swatches only Spanish has a word for, then one only English has. Ask "what does that say about us?" and leave it hanging until the denouement |
-| 1:30 | There's no such thing as brown | 1:00 | Brown is orange with context. The demo: a brown swatch whose surround fades from bright to black, and it turns orange. Nod to Technology Connections |
+| 0:15 | Words that don't translate | 1:15 | Two slides of paint chips, eight words each: colors only Spanish has a word for, then only English. Ask "what does that say about us?" and leave it hanging until the denouement |
+| 1:30 | Redheads | 0:40 | Orange is named after the fruit, and English had the fruit for a century before the color. Red stretched to cover it, which is why redheads and robin redbreasts are red. Spanish files them under red too: *pelirrojo*, *petirrojo*. Hands straight to brown, which is just orange |
+| 2:10 | There's no such thing as brown | 0:20 | Hand-waved, not demoed: brown is orange in a bright room, and the proof needs a dark room and more time than the slot has. Point anyone who wants it at Technology Connections. See Decided for why the demo went |
 | 2:30 | Color doesn't exist | 1:00 | Light has a wavelength, not a color. Visible light is a sliver between infrared and ultraviolet. Three kinds of cone squash a whole spectrum into three numbers, which is the only reason screens work |
 | 3:30 | Purple isn't real | 0:20 | The cliffhanger. Violet is on the spectrum, purple isn't. Stop before saying why |
 | 3:50 | Does democracy work? | 0:10 | The vote slide, see The vote |
@@ -94,6 +95,9 @@ Every claim the talk makes, with the line as delivered, the defence for when som
 | JWST colors are a translation | "Astronomers do on purpose what your brain does by accident." | NASA's image team calls it *representative color*: each infrared filter gets a visible color in wavelength order, shortest blue, longest red. Not one to one, and they adjust it to show the science | [Scientific American](https://www.scientificamerican.com/article/are-the-james-webb-space-telescopes-pictures-real/), [Astronomy](https://astronomy.com/science/jwst-sees-light-invisible-to-the-eye-these-scientists-decide-how-to-color-it) (*checked*) |
 | Hardware differs, words agree | "Some of you have sixteen times more red cones than green. You still agree on yellow." | In men with normal color vision, the L:M cone ratio ran from about 1.1:1 to 16.5:1, and unique yellow barely moves with it. Unique green does shift with cone ratio, which helps the point | [Hofer et al. 2005](https://pmc.ncbi.nlm.nih.gov/articles/PMC6725723) (*checked*). Yamauchi, Williams et al. 2002 (SPIE), on unique yellow and cone ratio |
 | Some of the room is colorblind | "Statistically, some of you see a different green right now." | Around 8% of men and 0.5% of women of Northern European descent have red-green color vision deficiency | National Eye Institute |
+| Orange is named after the fruit | "English had the fruit for a century before anyone called a color orange." | The fruit is in English by about 1380. The first color use is "orenge colour" sarcenet in Elizabeth of York's wardrobe accounts, June 1502, with Margaret Tudor's "slevys of orenge colour" weeks later. Plain "orange" as a color comes in the 1540s. Old English *ġeolurēad* is a rare glossary word for saffron-colored, so never call it the Old English word for orange | [Privy Purse Expenses of Elizabeth of York](https://archive.org/details/privypurseexpens00nicouoft), [Middle English Dictionary](https://quod.lib.umich.edu/m/middle-english-dictionary/dictionary/MED30800), [Wordorigins](https://wordorigins.org/big-list-entries/orange), Wikipedia, "Orange (colour)" (*checked*) |
+| Redheads are fossils | "That's why redheads are red. So are robin redbreasts." | Red for hair is late Old English, "redhead" is 1256 (as a surname), "redbreast" about 1400. Red was a broader category then (Old English even called gold *rēad*), and the label stuck. When English made new hair words it picked "carroty" and "ginger", never orange. Red fox (1742) and red squirrel (1682) came after orange existed, so never use them | [Etymonline, "redhead"](https://www.etymonline.com/word/redhead), [Etymonline, "redbreast"](https://www.etymonline.com/word/redbreast), [Merriam-Webster, "red fox"](https://www.merriam-webster.com/dictionary/red%20fox), [Language Hat](https://languagehat.com/gingernut/) (*checked*, Etymonline through search snippets) |
+| Spanish files them under red too | "*Pelirrojo, petirrojo.* The RAE defines red hair as a very bright blond." | Not because Spanish lacked the word: *naranjado* is from 1351 and *anaranjado* from 1484. *Rojo* only took over from *bermejo* as the main red in the 15th century. *Petirrojo* is *peto* (bib) plus *rojo*. The DLE gives *rojo*, of hair, as "de un rubio muy vivo" | [DLE, "rojo"](https://dle.rae.es/rojo), [RAE historical dictionary, "naranjado"](https://www.rae.es/dhle/naranjado), [Wiktionary, "petirrojo"](https://en.wiktionary.org/wiki/petirrojo). The DLE and RAE points came through search snippets, so check the *rojo* entry before saying the blond line |
 | Spanish and English mostly agree | Drives the swatch slides, never said outright | Castilian Spanish basic color terms line up with English almost one to one. *Celeste* is a basic color only in Uruguay. *Marrón* (Spain) and *café* (Mexico) name the same category, as do *morado* and *violeta* | [Lillo et al. 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC5968181) (*checked*) |
 
 **Avoid on stage:**
@@ -104,33 +108,47 @@ Every claim the talk makes, with the line as delivered, the defence for when som
 
 ## Swatch candidates
 
-None of these are verified. Every word needs a native speaker from Spain, and ideally one from Mexico, before it goes on a slide. Because Spanish and English basic color terms mostly agree (see Claims), these are colors of particular things: skin, eyes, hair, water.
+None of these are verified. Every word needs a native speaker from Spain before the night. Because Spanish and English basic color terms mostly agree (see Claims), these are colors of particular things: skin, eyes, hair, sky.
+
+The words with a hex are on the slides, eight a slide as paint chips (`scss/talk/_swatches.scss`). Every hex is a guess, since none of these words names a single color. "How sure" is how well a word survives a pedant, before any native speaker has checked it.
 
 **Spanish, no one-word English equivalent:**
 
-| Word | Roughly | Notes |
-|---|---|---|
-| *trigueño* | wheat-colored, of skin or hair | |
-| *zarco* | light blue, of eyes | |
-| *güero* | fair or blond, of people | Mexican |
-| *celeste* | sky blue | Basic only in Uruguay. Two words in English |
-| *verde agua* | pale sea green | Two words in Spanish too, so maybe not |
+| Word | Roughly | Hex | How sure | Notes |
+|---|---|---|---|---|
+| *celeste* | sky blue | `#6cace4` | Solid | Basic only in Uruguay. Two words in English |
+| *trigueño* | wheat-colored, of skin or hair | `#c69c62` | Solid | |
+| *zarco* | light blue, of eyes | `#9dbdd3` | Solid | A bit literary |
+| *moreno* | tanned, or dark-haired | `#9a6a45` | Solid | One word for both. Also why tan isn't on the English slide |
+| *canoso* | gray-haired | `#c9c6c0` | Solid | |
+| *blanquiazul* | white-and-blue | Málaga CF's stripes | Solid | Spanish welds two colors into one word. The chip's blue (`#1d5fae`) is a guess at the club's |
+| *pardo* | gray-brown, of bears and sparrows | `#7d6b57` | Medium | English has "dun". Spanish says every cat at night is *pardo*, English says gray |
+| *amoratado* | purple, of bruises and cold lips | `#6a4c7d` | Medium | English says "black-and-blue" |
+| *entrecano* | half-gray, of hair | | Medium | Held back: "grizzled" is close, and *canoso* covers it |
+| *bermejo* | red-gold, of hair | | Medium | Held back: "russet", "ginger" |
+| *rucio* | silver-gray, of donkeys | | Medium | Held back. Sancho Panza's donkey is called Rucio. A bit old-fashioned |
+| *güero* | fair or blond, of people | | | Dropped: Mexican, and the room is in Spain |
+| *verde agua* | pale sea green | | | Dropped: two words in Spanish too |
 
 **English, no one-word Spanish equivalent:**
 
-| Word | Roughly | Notes |
-|---|---|---|
-| teal | dark blue-green | Spanish reaches for *verde azulado* or *azul petróleo* |
-| hazel | of eyes | *color avellana* |
-| auburn | of hair | *castaño rojizo* |
-| tan | light brown, of skin or leather | |
-| periwinkle | pale blue-violet | |
+| Word | Spanish needs | Hex | How sure | Notes |
+|---|---|---|---|---|
+| teal | *verde azulado* | `#008080` | Solid | Spanish also reaches for *azul petróleo* |
+| hazel | *color avellana* | `#8e7618` | Solid | Of eyes |
+| auburn | *castaño rojizo* | `#a52a2a` | Solid | Of hair. The hex is CSS's `brown` keyword |
+| navy | *azul marino* | `#24346e` | Solid | |
+| taupe | *gris topo* | `#9c8b7e` | Fairly solid | *Taupe* is French for mole, and *topo* is Spanish for it |
+| eggshell | *blanco cáscara de huevo* | `#f0ead6` | Fairly solid | Four words |
+| periwinkle | *azul pervinca* | `#ccccff` | Shaky | |
+| puce | *color pulga* | `#cc8899` | Shaky | *Puce* is French for flea. Plenty of English speakers don't know it either |
+| buff | *color ante* | | Shaky | Held back |
+| tan | | | | Dropped: Spanish *moreno* covers tanned skin in one word |
 
 ## Reservoir
 
 Tangents and lines that didn't make the run. Pull from here if something dies in rehearsal.
 
-- Orange is named after the fruit, and the color word came later, which is why orange-haired people are "redheads". Spanish says *pelirrojo* too. Check the etymology first.
 - Pink is named after a flower (*Dianthus*, "pinks"), and so is *rosa*.
 - Berlin and Kay (1969): languages pick up color words in a rough order, and brown arrives late.
 - The Russian blues, *goluboy* and *siniy*.
@@ -151,7 +169,7 @@ If the yes path runs long, cut in this order:
 3. JWST's how-it-works (keep the spaceship)
 4. One of the two qualia stats
 
-Never cut: the brown demo, the cliffhanger, the vote, the spaceship.
+Never cut: the brown line (it's in the title), the cliffhanger, the vote, the spaceship.
 
 ## Open questions
 
@@ -166,8 +184,8 @@ Anything here that turns into work gets an issue and a link.
 | Does the heel's last slide give the URL, or does the room not deserve it? | `pug/sections/_09-heel.pug` | |
 | A sound sting for the heel? Depends on venue audio | The heel | |
 | Ask the organizers to rig the vote so Lemon loses? Assumed not | The vote | |
-| Visuals: the brown demo, the two swatch slides, the CIE horseshoe, Hubble vs Webb Pillars of Creation (ESA/Webb images are CC BY 4.0, so credit them) | `+gag` placeholders | |
-| Check the redhead etymology before using it | Reservoir | |
+| Visuals: the CIE horseshoe, Hubble vs Webb Pillars of Creation (ESA/Webb images are CC BY 4.0, so credit them). The brown demo is dropped, see Decided | `+gag` placeholders | [#3](https://github.com/AhoyLemon/color-is-a-lie/issues/3) |
+| Check the DLE's *rojo* entry ("de un rubio muy vivo") before saying the blond line | Claims | |
 | Check every claim not marked *checked* | Claims | |
 
 ## Decided, recorded here so it does not get re-litigated
@@ -184,6 +202,8 @@ Anything here that turns into work gets an issue and a link.
 | A thumbs-down gets heel mode: pure heat, no recanting | Getting cut off at 5:00 is already a wrestling moment |
 | The heel is the ugly American plus food crimes, never Trump | Small-minded and brash is a fun character. Trumpism in 2026 is too real to be funny, and it would turn the room for real |
 | No hello, no Blank Metal intro, no shared outro. Title, straight in, then name, handle and URL at the end | Every second before 4:00 counts toward the vote. The shared section files stay in the repo, uncalled |
+| The brown demo is out, and brown gets one hand-wave slide | Lemon's call. It was built twice: a swatch whose surround faded to black, then Technology Connections' order (a big orange square on black, dimmed, then the room's lights switched on and off around it). Neither landed on a laptop screen, and a minute before the vote is worth more spent on something that does |
+| Reveal's default navigation, not `navigationMode: "linear"`. Drive the deck with space or Page Down | Lemon's call. The right arrow skips the slides below a stack, so a clicker that sends arrow keys needs swapping or remapping |
 | No 10-minute version | The prize slot doesn't matter: Lemon already speaks at Wey Wey Web |
 | One working doc | An 8-minute talk doesn't need `web-animations`' PLAN, TIMELINE and TODO |
 | English | The conferences run in English |
