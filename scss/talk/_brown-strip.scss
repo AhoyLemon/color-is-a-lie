@@ -5,12 +5,6 @@
 $bright-room: #fff;
 
 .reveal .slides section.over-media.brown-strip {
-  // The line is the title's promise, so it stays on one line.
-  > h2 {
-    max-inline-size: none;
-    white-space: nowrap;
-  }
-
   .room {
     position: absolute;
     inset: 0 0 auto;

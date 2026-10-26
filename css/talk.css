@@ -1,3 +1,8 @@
+.reveal .slides section.over-media.one-line > h2 {
+  max-inline-size: none;
+  white-space: nowrap;
+}
+
 .reveal .slides section.over-media:has(> cite.credit) {
   padding-bottom: 12cqh;
 }
@@ -151,8 +156,12 @@
 }
 
 .reveal .slides section.over-media.portrait.is-figure > img {
+  top: 5cqh;
+  right: 7.5cqw;
+  left: auto;
+  inline-size: auto;
+  block-size: 70cqh;
   object-fit: contain;
-  object-position: center;
 }
 
 .reveal .slides section.dictionary .entry {
@@ -194,10 +203,6 @@
   color: var(--lemon-ink);
 }
 
-.reveal .slides section.over-media.brown-strip > h2 {
-  max-inline-size: none;
-  white-space: nowrap;
-}
 .reveal .slides section.over-media.brown-strip .room {
   position: absolute;
   inset: 0 0 auto;

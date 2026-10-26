@@ -23,8 +23,12 @@
   }
 }
 
-// A figure from a paper is shown whole, not cropped to fill the half.
+// A figure from a paper is shown whole, top right, and short enough to clear a one-line caption across the bottom.
 .reveal .slides section.over-media.portrait.is-figure > img {
+  top: 5cqh;
+  right: $safe-x;
+  left: auto;
+  inline-size: auto;
+  block-size: 70cqh;
   object-fit: contain;
-  object-position: center;
 }

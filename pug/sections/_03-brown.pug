@@ -5,7 +5,7 @@
   const brownSteps = [100, 80, 60, 45, 30]
   const dimOrange = (percent) => "#" + [255, 128, 0].map((c) => Math.round(c * percent / 100).toString(16).padStart(2, "0")).join("")
 
-section.over-media.brown-strip(data-timing="20")
+section.over-media.brown-strip.one-line(data-timing="20")
   .room
     each percent in brownSteps
       .chip(style=`--chip: ${dimOrange(percent)};`)
