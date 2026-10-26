@@ -1,0 +1,24 @@
+@use "../lemon/abstracts/variables" as *;
+
+// A portrait slide: a tall photo on a black ground fills the right half of the canvas, cropped from the top, and the over-media caption hangs low on the left. The photo is an img in the slide, not a reveal background, so an eyedropper on it lines up in canvas units on any screen. Give the section data-background-color="#000" to match a photo shot on black.
+
+.reveal .slides section.over-media.portrait {
+  > img {
+    position: absolute;
+    top: 0;
+    left: 50cqw;
+    inline-size: 50cqw;
+    block-size: 100cqh;
+    // Lemon caps slide images at 70cqh. A portrait is the whole height, and the eyedropper's position depends on it.
+    max-block-size: none;
+    margin: 0;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  > h2,
+  > p {
+    position: relative;
+    z-index: 1;
+  }
+}

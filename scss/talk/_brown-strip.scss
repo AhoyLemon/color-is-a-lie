@@ -1,0 +1,44 @@
+@use "../lemon/abstracts/variables" as *;
+@use "../lemon/abstracts/mixins" as *;
+
+// The brown strip (pug/sections/_03-brown.pug): one orange dimmed a step at a time, on a white room across the top of the canvas, with the over-media caption low on the ink below it. The white is the "bright room" every chip is seen against, so it's a specimen colour like the chips, not palette. Each chip's colour arrives as --chip from the Pug that computes it.
+$bright-room: #fff;
+
+.reveal .slides section.over-media.brown-strip {
+  .room {
+    position: absolute;
+    inset: 0 0 auto;
+    block-size: 64cqh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: $gap;
+    align-content: center;
+    padding: 0 $safe-x;
+    background: $bright-room;
+  }
+
+  .chip {
+    display: grid;
+    gap: 0.25em;
+
+    &::before {
+      content: "";
+      display: block;
+      block-size: 30cqh;
+      background: var(--chip);
+    }
+  }
+
+  code {
+    color: $ink;
+    font-family: $font-mono;
+    font-size: $step-small;
+  }
+
+  .percent {
+    @include aside;
+
+    color: color-mix(in oklab, $ink 64%, transparent);
+  }
+}

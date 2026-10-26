@@ -1,0 +1,15 @@
+@use "../lemon/abstracts/variables" as *;
+
+// Over-media captions, as this talk uses them: a little more room above a photo credit, and the shout register for the thesis line, set in Yrsa at shout size on the cream strip the way the thank-you sets its word.
+
+// A photo with a credit lifts its caption a little, so the credit strip below it has room to breathe.
+.reveal .slides section.over-media:has(> cite.credit) {
+  padding-bottom: 12cqh;
+}
+
+.reveal .slides section.over-media.is-shout > h2 {
+  font-family: $font-display;
+  font-size: $step-shout;
+  font-weight: 500;
+  line-height: 0.95;
+}

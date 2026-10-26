@@ -2,8 +2,21 @@
 //
 // Retune Lemon's colours here by redeclaring any --lemon-* property on :root, e.g. :root { --lemon-field: #c1502e; }. Keep this file to @use lines over partials in scss/talk/.
 
+// Over-media captions: room above a photo credit, and the shout register (the thesis line).
+@use "talk/captions";
+
 // The swatch slides' paint chips (pug/sections/_02-language.pug).
 @use "talk/swatches";
+
+// The eyedropper on a photo, and the portrait slide it sits on (the redheads, pug/sections/_02-language.pug).
+@use "talk/eyedropper";
+@use "talk/portrait";
+
+// The blonde payoff, with the DLE entry for rojo on a card (pug/sections/_02-language.pug).
+@use "talk/dictionary";
+
+// One orange dimmed to brown on a white room (pug/sections/_03-brown.pug).
+@use "talk/brown-strip";
 
 // The vote slide's Yes and No (pug/sections/_04-purple.pug).
 @use "talk/vote";

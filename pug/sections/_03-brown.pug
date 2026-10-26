@@ -1,12 +1,22 @@
-//- 3:10 THERE'S NO SUCH THING AS BROWN. A hand-wave, not a demo: docs/TALK.md, Decided, says why.
+//- 3:10 THERE'S NO SUCH THING AS BROWN. A still strip, not a demo: docs/TALK.md, Decided, says why.
 
-section.statement(data-timing="20")
+//- One orange, #ff8000, with the lights turned down a step at a time. Every chip sits on the same white, so the dim ones go brown in front of the room, on any screen. The hexes are computed, so they're the chips' real values.
+-
+  const brownSteps = [100, 80, 60, 45, 30]
+  const dimOrange = (percent) => "#" + [255, 128, 0].map((c) => Math.round(c * percent / 100).toString(16).padStart(2, "0")).join("")
+
+section.over-media.brown-strip(data-timing="20")
+  .room
+    each percent in brownSteps
+      .chip(style=`--chip: ${dimOrange(percent)};`)
+        code= dimOrange(percent)
+        span.percent #{percent}%
   h2 There's no such thing as brown.
-  p It's orange in a bright room.
-  p.aside.fragment (the proof needs a dark room and ten minutes, and you vote in a minute)
+  p (it's orange with the lights turned down)
   aside.notes
     ul
       li Evidence: the same light changes color with whatever's around it.
+      li Every chip is the same orange, #ff8000, at 100% down to 30% brightness. On white, the dim ones are brown. Nobody painted them brown.
       li The title's promise. One line, then move on.
       li If challenged: brown is a related color, it only appears next to something brighter. A dim orange light alone in the dark is orange, never brown.
       li Technology Connections did it properly ("Brown; color is weird"). Point anyone who wants the proof there.

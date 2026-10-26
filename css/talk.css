@@ -1,3 +1,14 @@
+.reveal .slides section.over-media:has(> cite.credit) {
+  padding-bottom: 12cqh;
+}
+
+.reveal .slides section.over-media.is-shout > h2 {
+  font-family: "Yrsa", Georgia, serif;
+  font-size: 2.4em;
+  font-weight: 500;
+  line-height: 0.95;
+}
+
 .reveal .slides section.swatches {
   align-content: start;
   row-gap: 4cqh;
@@ -78,6 +89,139 @@
 }
 .reveal .slides section.swatches .blanquiazul::before {
   background: repeating-linear-gradient(90deg, #fff 0 2.5cqw, #1d5fae 2.5cqw 5cqw);
+}
+
+.reveal .slides section .eyedropper {
+  position: absolute;
+  top: calc(var(--y) * 1cqh);
+  right: calc(100cqw - var(--x) * 1cqw - 5cqw / 2);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+}
+.reveal .slides section .eyedropper .chip {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.6em 0.3em 0.3em;
+  background: var(--lemon-ink);
+  outline: 0.16cqw solid var(--lemon-cream-line);
+}
+.reveal .slides section .eyedropper .swatch {
+  inline-size: 1.3em;
+  block-size: 1.3em;
+  background: var(--sample);
+}
+.reveal .slides section .eyedropper code {
+  color: var(--lemon-cream);
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 1em;
+  line-height: 1;
+}
+.reveal .slides section .eyedropper .lead {
+  inline-size: var(--reach, 9cqw);
+  block-size: 0.16cqw;
+  background: var(--lemon-cream);
+}
+.reveal .slides section .eyedropper .ring {
+  box-sizing: border-box;
+  inline-size: 5cqw;
+  block-size: 5cqw;
+  border: 0.35cqw solid var(--lemon-cream);
+  border-radius: 50%;
+}
+
+.reveal .slides section.over-media.portrait > img {
+  position: absolute;
+  top: 0;
+  left: 50cqw;
+  inline-size: 50cqw;
+  block-size: 100cqh;
+  max-block-size: none;
+  margin: 0;
+  object-fit: cover;
+  object-position: top;
+}
+.reveal .slides section.over-media.portrait > h2,
+.reveal .slides section.over-media.portrait > p {
+  position: relative;
+  z-index: 1;
+}
+
+.reveal .slides section.dictionary .entry {
+  position: absolute;
+  top: 10cqh;
+  left: 7.5cqw;
+  inline-size: 30cqw;
+  box-sizing: border-box;
+  padding: 0.9em 1em 1em;
+  background: var(--lemon-cream);
+  color: var(--lemon-ink);
+}
+.reveal .slides section.dictionary .entry :where(p) {
+  margin: 0;
+  color: inherit;
+}
+.reveal .slides section.dictionary .entry .headword {
+  font-size: 1.9em;
+  font-weight: 600;
+  line-height: 1;
+}
+.reveal .slides section.dictionary .entry .sense {
+  margin-top: 0.4em;
+  font-size: 1em;
+  line-height: 1.3;
+}
+.reveal .slides section.dictionary .entry .gloss {
+  color: var(--lemon-text-quiet);
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6em;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  margin-top: 0.6em;
+  color: var(--lemon-ink);
+}
+.reveal .slides section.dictionary .entry mark {
+  padding: 0 0.15em;
+  background: var(--lemon-focus);
+  color: var(--lemon-ink);
+}
+
+.reveal .slides section.over-media.brown-strip .room {
+  position: absolute;
+  inset: 0 0 auto;
+  block-size: 64cqh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5cqw;
+  align-content: center;
+  padding: 0 7.5cqw;
+  background: #fff;
+}
+.reveal .slides section.over-media.brown-strip .chip {
+  display: grid;
+  gap: 0.25em;
+}
+.reveal .slides section.over-media.brown-strip .chip::before {
+  content: "";
+  display: block;
+  block-size: 30cqh;
+  background: var(--chip);
+}
+.reveal .slides section.over-media.brown-strip code {
+  color: var(--lemon-ink);
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6em;
+}
+.reveal .slides section.over-media.brown-strip .percent {
+  color: var(--lemon-text-quiet);
+  font-family: "Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.6em;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  color: color-mix(in oklab, var(--lemon-ink) 64%, transparent);
 }
 
 .reveal .slides section.vote .answers {
