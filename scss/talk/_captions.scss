@@ -1,0 +1,26 @@
+@use "../lemon/abstracts/variables" as *;
+
+// Over-media captions, as this talk uses them: one-line captions, a little more room above a photo credit, a subhead for the closer, and the shout register for the thesis line, set in Yrsa at shout size on the cream strip the way the thank-you sets its word.
+
+// A caption that has to stay on one line, like the brown slide's promise and the three numbers.
+.reveal .slides section.over-media.one-line > h2 {
+  max-inline-size: none;
+  white-space: nowrap;
+}
+
+// A photo with a credit lifts its caption a little, so the credit strip below it has room to breathe.
+.reveal .slides section.over-media:has(> cite.credit) {
+  padding-bottom: 12cqh;
+}
+
+.reveal .slides section.over-media.is-shout > h2 {
+  font-family: $font-display;
+  font-size: $step-shout;
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+// A caption with a subhead: the p under the heading is a line to act on, not an aside, so it runs at lead size on its ink strip.
+.reveal .slides section.over-media.has-subhead > p {
+  font-size: $step-lead;
+}

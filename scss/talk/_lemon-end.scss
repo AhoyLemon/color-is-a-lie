@@ -1,0 +1,25 @@
+@use "../lemon/abstracts/variables" as *;
+
+// The end of both paths (pug/sections/_08-denouement.pug and _09-heel.pug): just the lemon, centred on its yellow, and the address small in mono near the bottom. DESIGN.md records the centring.
+
+.reveal .slides section.lemon-slide.lemon-end {
+  justify-items: center;
+  align-content: center;
+
+  > img {
+    width: 56cqh;
+    height: 56cqh;
+  }
+
+  > p {
+    position: absolute;
+    right: 0;
+    bottom: 9cqh;
+    left: 0;
+    margin: 0;
+    font-family: $font-mono;
+    font-size: $step-small;
+    line-height: 1.3;
+    text-align: center;
+  }
+}

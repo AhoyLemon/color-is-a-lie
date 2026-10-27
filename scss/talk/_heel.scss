@@ -1,0 +1,87 @@
+@use "../lemon/abstracts/variables" as *;
+
+// The heel's coffee (pug/sections/_09-heel.pug): Café Central's chart is the slide's background, the first click scrawls an X over its options, and the second chucks the American coffee on top. The X and the mug sit on the canvas, placed against the chart as it fills a 16:9 screen.
+
+// The box the X spans: the two rows of cups and their names, with some slop, the way you'd scrawl it.
+$cross-top: 42cqh;
+$cross-right: 10cqw;
+$cross-bottom: 9cqh;
+$cross-left: 12cqw;
+$cross-width: calc(100cqw - #{$cross-left} - #{$cross-right});
+$cross-height: calc(100cqh - #{$cross-top} - #{$cross-bottom});
+$stroke: 2.5cqh;
+
+.reveal .slides section.crossed-out {
+  // Two Rust strokes, drawn one after the other the way a hand would: top left to bottom right, then top right to bottom left. Each pivots on the corner it starts from and grows out of it, the strike's move at canvas scale.
+  .cross {
+    position: absolute;
+    inset: $cross-top $cross-right $cross-bottom $cross-left;
+    z-index: 1;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc($stroke / -2);
+      inline-size: hypot($cross-width, $cross-height);
+      block-size: $stroke;
+      background: $touch;
+      scale: 0 1;
+      transform-origin: left center;
+      transition: scale 420ms $ease-out;
+    }
+
+    &::before {
+      left: 0;
+      rotate: atan2($cross-height, $cross-width);
+    }
+
+    &::after {
+      left: $cross-width;
+      rotate: calc(180deg - atan2($cross-height, $cross-width));
+      transition-delay: 240ms;
+    }
+
+    &.visible::before,
+    &.visible::after {
+      scale: 1 1;
+    }
+  }
+
+  // The Big Gulp, product shot and all, chucked on top right of centre. It drops in from above the canvas and the spring's overshoot bounces it. A custom fragment, so this is the only motion on it.
+  > img.big-gulp {
+    position: absolute;
+    top: 38cqh;
+    left: 50cqw;
+    z-index: 2;
+    inline-size: 30cqw;
+    block-size: auto;
+    max-block-size: none;
+    opacity: 0;
+    visibility: hidden;
+    translate: 0 -60cqh;
+    transition: opacity 200ms linear, translate 1450ms $spring, visibility 200ms;
+
+    &.visible {
+      opacity: 1;
+      visibility: inherit;
+      translate: 0 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section.crossed-out {
+    .cross::before,
+    .cross::after {
+      transition-duration: 0ms;
+      transition-delay: 0ms;
+    }
+
+    > img.big-gulp {
+      translate: none;
+      transition: opacity 240ms linear, visibility 240ms;
+    }
+  }
+}

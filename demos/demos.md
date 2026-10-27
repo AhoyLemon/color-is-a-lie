@@ -7,7 +7,7 @@
 
 ## The demo foundation
 
-`demos/scss/partials/_demo-foundation.scss` gives every demo the same ground as the deck: Lemon's `--lemon-*` tokens (shared from `scss/lemon/base/_root.scss`, not copied), the three faces, an Ink page, and a frame sized for `+demo`'s 1280 × 600 iframe. The frame is a stage, then a cream context strip naming the API or idea, then a Rust control rail. The rail's controls are `.demo-trigger` (the run button), `.stage-action`, `label.demo-toggle` and `label.demo-range`, all with hover, focus-visible and active states. The `reduce-motion` and `visually-hidden` mixins come with it.
+`demos/scss/partials/_demo-foundation.scss` gives every demo the same ground as the deck: Lemon's `--lemon-*` tokens (shared from `scss/lemon/base/_root.scss`, not copied), the three faces, an Ink page, and a frame sized for `+demo`'s 1280 × 600 iframe. The frame is a stage, then a cream context strip naming the API or idea, then a Rust control rail. The rail's controls are `.demo-trigger` (the run button), `label.demo-toggle` and `label.demo-range`, and `.stage-action` is a Rust ghost button on the stage itself. Both buttons have hover, focus-visible and active states, and the toggle and the range show focus-visible on their drawn track. The `reduce-motion` and `visually-hidden` mixins come with it.
 
 Demos are real pages in an iframe, not slides on the canvas, so px and viewport units are fine in demo styles.
 
@@ -34,7 +34,11 @@ Types are stripped without being checked, so `bun build` will happily bundle cod
 You can use the `demo` mixin by declaring the filename and optional width/height.
 
 ```pug
-+demo('sample-demo.html') // default size: 1280x600
-// or
-+demo('sample-demo.html', 800, 400) // custom size: 800x400
+//- Default size, 1280 x 600
++demo('sample-demo.html')
+
+//- Custom size, 800 x 400
++demo('sample-demo.html', 800, 400)
 ```
+
+Keep comments on their own line. Anything after the mixin call on the same line becomes the demo's block content and lands on the slide.

@@ -1,0 +1,59 @@
+@use "../lemon/abstracts/variables" as *;
+
+// The eyedropper (+eyedropper in pug/partials/_talk-mixins.pug): a ring on one pixel of a photo, a hairline out to the left, and a chip with the swatch and its hex. The ring's centre sits at --x and --y (cqw and cqh), so the whole thing is anchored by its right end. It moves with transform, not translate, so a fragment's landing rise can still use translate.
+$ring: 5cqw;
+$ring-weight: 0.35cqw;
+
+.reveal .slides section .eyedropper {
+  position: absolute;
+  top: calc(var(--y) * 1cqh);
+  right: calc(100cqw - var(--x) * 1cqw - #{$ring} / 2);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+
+  .chip {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.3em 0.6em 0.3em 0.3em;
+    background: $ink;
+    outline: $fold-width solid $cream-line;
+  }
+
+  .swatch {
+    inline-size: 1.3em;
+    block-size: 1.3em;
+    background: var(--sample);
+  }
+
+  code {
+    color: $cream;
+    font-family: $font-mono;
+    font-size: $step-lead;
+    line-height: 1;
+  }
+
+  // A second reading after the hex, quieter: "no wavelength".
+  .note {
+    color: $text-quiet;
+    font-family: $font-mono;
+    font-size: $step-small;
+  }
+
+  .lead {
+    inline-size: var(--reach, 9cqw);
+    block-size: $fold-width;
+    background: $cream;
+  }
+
+  // The one round thing in the deck: an eyedropper's loupe is a circle.
+  .ring {
+    box-sizing: border-box;
+    inline-size: $ring;
+    block-size: $ring;
+    border: $ring-weight solid $cream;
+    border-radius: 50%;
+  }
+}

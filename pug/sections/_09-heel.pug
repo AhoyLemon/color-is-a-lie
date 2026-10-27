@@ -1,26 +1,80 @@
-//- 4:00 HEEL MODE: the no path, out by 5:00. It sits after the yes path's end slide and is reached by the vote slide's No link or the X key. Placeholders until Lemon writes it: docs/TALK.md, The heel.
+//- 4:00 HEEL MODE: the no path, out by 5:00. It sits after the yes path's end slide and is reached by the vote slide's No link or the X key. The ugly American and his food crimes, one line a slide, never Trump: docs/TALK.md, The heel, has the character and the guardrail.
 
-section#heel.statement.is-shout(data-timing="10")
-  h2 [The heel turn]
+//- A swap is two slides with a fade between them, so each photo is a data-background and bleeds to the edge of any screen. The paella and the tortilla are vertical stacks. Taco Bell's pair keeps the same caption on both, in the same place, so only the photo changes.
+
+//- The turn is a smash cut, so it lands while the room is still booing the vote. The Mexico mix-up pays off at Taco Bell. Anchored to the bottom so the city fills the frame and the caption sits on the park.
+section#heel.over-media.is-shout(data-background-image="img/malaga.jpg" data-background-position="center bottom" data-transition="none" data-timing="8")
+  h2 Hola, Mexico!
   aside.notes
     ul
-      li Pure heat. No recanting, no color.
+      li The turn. Don't explain it. Become the loudest American you've ever sat next to on a plane.
+      li Pure heat from here. No recanting, no color.
+      li Málaga from up on Gibralfaro: the port, La Farola, the cathedral.
 
-section.statement(data-timing="20")
-  h2 [Heat: food crimes]
+section
+  section.over-media(data-background-image="img/paella.jpg" data-transition="fade" data-timing="6")
+    aside.notes
+      ul
+        li So the first day I got here I ate something called peelluh, and it was gross. The bottom was all burnt.
+        li Background, not a line: Jamie Oliver put chorizo in his on 4 October 2016, and Spain still hasn't forgiven him.
+
+  section.over-media(data-background-image="img/paella-hot-dogs.jpg" data-transition="fade" data-timing="6")
+    h2 I fixed your paella.
+    aside.notes
+      ul
+        li So I fixed it. All it needed was a rice cooker and hot dogs.
+
+section
+  section.over-media(data-background-image="img/tortilla.jpg" data-transition="fade" data-timing="4")
+    h2 What is this thing?
+    aside.notes
+      ul
+        li And while we're at it, what is this thing?
+
+  section.over-media(data-background-image="img/tortilla-ketchup.jpg" data-transition="fade" data-timing="4")
+    aside.notes
+      ul
+        li And why didn't you give me ketchup with it?
+
+section.over-media(data-background-image="img/espetos.jpg" data-timing="8")
+  h2.fragment You're doing fish sticks wrong.
   aside.notes
     ul
-      li Chorizo in the paella. Onion in the tortilla, loudly.
+      li Espetos, on the beach at La Malagueta. The most Málaga food there is.
+      li Click: in America the fish goes inside the stick. Breaded. Rectangular. Frozen. The way God intended.
 
-section.statement(data-timing="20")
-  h2 [Heat: the ugly American]
+//- Café Central's tile chart. The first click draws an X over the options, and the second chucks the American coffee on top, dropping in from above. Both sit on the canvas, so on a screen that isn't 16:9 the X drifts a little off the cups, which a scrawl can take.
+section.over-media.crossed-out(data-background-image="img/cafe-central.jpg" data-timing="10")
+  .cross.fragment.custom(data-fragment-index="1" aria-hidden="true")
+  img.big-gulp.fragment.custom(src="img/big-gulp.jpg" alt="A hand holding a 7-Eleven Big Gulp mug the size of a bucket" data-fragment-index="2")
   aside.notes
     ul
-      li Small-minded, arrogant, loud-mouthed, brash, incurious.
-      li Never Trump. docs/TALK.md has the guardrail.
+      li Café Central's chart, from 1954. Nine ways to order a coffee in Málaga, and a tenth, "no me lo ponga", that means don't bother.
+      li Click: none of these is a coffee.
+      li Click: this is a coffee. I believe you call that a Venti.
 
-section.cover(data-timing="10")
-  h1 [The heel exits]
+//- The caption first, on the ink, then the same caption over Taco Bell. Neither slide has a credit, which would lift the caption on one and not the other. The second arrives with no transition, so its caption is there at full strength under the first one as that fades out, and only the photo fades in.
+section.over-media(data-transition="fade" data-timing="4")
+  h2 I'm going to get some real Spanish food.
   aside.notes
     ul
-      li Open question: does the room get the URL?
+      li Thanks for voting me down, that means I can get out of here to get some real Spanish food.
+
+section.over-media(data-background-image="img/taco-bell.jpg" data-transition="none" data-timing="5")
+  h2 I'm going to get some real Spanish food.
+  aside.notes
+    ul
+      li Taco Bell. The Mexico mix-up pays off, so don't explain it either.
+      li Then turn your back on the room.
+
+//- The heel's end: the yes path's lemon, and the address struck through on the click. The room still gets the URL. It just has to read it through a line.
+section.lemon-slide.lemon-end(data-background="#e6e924" data-timing="5")
+  img(src="svg/lemon.svg" alt="" role="presentation")
+  p
+    span.fragment.strike
+      +link(liveURL)
+        | ahoylemon.github.io/color-is-a-lie
+  aside.notes
+    ul
+      li Click: strike the address. They voted.
+      li Out by 5:00.

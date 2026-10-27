@@ -1,16 +1,32 @@
-//- 5:00 JWST. This plants the spaceship the denouement pays off.
+//- 5:10 JWST. A spaceship with its own sensors, translated for us. This plants the spaceship the denouement pays off.
 
-+gag("Pillars of Creation: Hubble next to Webb. ESA/Webb images are CC BY 4.0, so credit them.")(data-timing="40")
-  h2 Colors nobody has ever seen.
+//- Hubble and Webb side by side, Webb on the click. Each half is an img in the slide, cropped to the pillars.
+section.over-media.pillars(data-background-color="#000" data-timing="30")
+  img.hubble(src="img/pillars-hubble.jpg" alt="The Pillars of Creation in visible light, from Hubble")
+  img.webb.fragment.fade-in(data-fragment-index="1" src="img/pillars-webb.jpg" alt="The Pillars of Creation in infrared, from Webb")
+  p.label.hubble Hubble
+  p.label.webb.fragment.fade-in(data-fragment-index="1") Webb
+  cite.credit NASA, ESA, CSA, STScI
   aside.notes
     ul
-      li Webb sees infrared. Nobody has ever seen these colors, including the people who made the picture.
-      li Representative color: shortest wavelengths to blue, longest to red.
+      li The Pillars of Creation. Hubble, in light like the light you see: colors you've seen.
+      li Click: Webb, in infrared. Nobody has ever seen these colors, including the people who made the picture.
 
-section.statement(data-timing="35")
-  h2 A spaceship with its own sensors.
-  p Translated, for us.
+section.over-media.translated(data-timing="20")
+  +webbTranslation
   aside.notes
     ul
-      li Astronomers do on purpose what your brain does by accident.
-      li Land "spaceship" clearly. It comes back.
+      li You see the sliver on the left. Everything Webb sees is infrared, all of that dark band, and none of it has a color.
+      li So the image team gives each filter a visible color in wavelength order. Shortest to purple, longest to red. For the Pillars: purple, blue, cyan, yellow, orange, red, from 0.9 to 4.7 micrometres. NASA calls it representative color.
+      li Yes, the shortest one is purple. The color that doesn't exist.
+      li They do on purpose what your brain does by accident.
+      li First to cut after the vote if the yes path runs long. Keep the spaceship.
+
+section.over-media(data-background-image="img/webb-mirror.jpg" data-timing="15")
+  h2 Every spaceship has its own sensors.
+  cite.credit Photo: NASA
+  aside.notes
+    ul
+      li Webb's mirror, the day it opened in the cleanroom.
+      li Every spaceship has its own sensors. This one sees light no human can, and translates it for us.
+      li Land "spaceship" clearly. The next slide hangs off it, just like you, and it comes back in the denouement.

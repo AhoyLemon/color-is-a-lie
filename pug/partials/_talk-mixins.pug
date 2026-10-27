@@ -1,0 +1,18 @@
+//- This talk's own mixins. Lemon's shared ones are in _mixins.pug.
+
+//- An eyedropper reading off one pixel of a photo, like Figma's or Photoshop's: a ring on the spot, a hairline out to a chip with the sampled swatch and its hex. x and y are the ring's centre in cqw and cqh of the canvas, hex is the pixel's real colour, sampled from the image file, and an optional note rides in the chip after it. scss/talk/_eyedropper.scss draws it.
+mixin eyedropper(x, y, hex, note)
+  .eyedropper(style=`--x: ${x}; --y: ${y}; --sample: ${hex};`)&attributes(attributes)
+    span.chip
+      span.swatch
+      code= hex
+      if note
+        span.note= note
+    span.lead
+    span.ring
+
+//- The spectrum drawings: the horseshoe, the spectrum as a line, and Webb's infrared translated.
+include _horseshoe.pug
+
+//- The fruit stand's lenses and the drawings of the retinas behind them.
+include _lenses.pug

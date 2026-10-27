@@ -2,5 +2,38 @@
 //
 // Retune Lemon's colours here by redeclaring any --lemon-* property on :root, e.g. :root { --lemon-field: #c1502e; }. Keep this file to @use lines over partials in scss/talk/.
 
+// Over-media captions: room above a photo credit, and the shout register (the thesis line).
+@use "talk/captions";
+
+// The swatch slides' paint chips (pug/sections/_02-language.pug).
+@use "talk/swatches";
+
+// The eyedropper on a photo, and the portrait slide it sits on (the redheads, pug/sections/_02-language.pug).
+@use "talk/eyedropper";
+@use "talk/portrait";
+
+// The blonde payoff, with the DLE entry for rojo on a card (pug/sections/_02-language.pug).
+@use "talk/dictionary";
+
+// One orange dimmed to brown on a white room (pug/sections/_03-brown.pug).
+@use "talk/brown-strip";
+
 // The vote slide's Yes and No (pug/sections/_04-purple.pug).
 @use "talk/vote";
+
+// The purple beat: the spectrum as a line, bent into a horseshoe and closed with purple (pug/sections/_05-line-of-purples.pug).
+@use "talk/horseshoe";
+
+// Hubble and Webb side by side, and Webb's infrared translated (pug/sections/_06-jwst.pug).
+@use "talk/pillars";
+@use "talk/spectrum";
+
+// The fruit stand in four bands, three of them behind lenses for eyes missing a kind of cone, then Jupiter in infrared and ultraviolet (pug/sections/_07-your-green.pug).
+@use "talk/lenses";
+@use "talk/jupiter";
+
+// The end of both paths: the lemon, centred (pug/sections/_08-denouement.pug and _09-heel.pug).
+@use "talk/lemon-end";
+
+// The heel's photos that land on a click, and the coffee chart crossed out (pug/sections/_09-heel.pug).
+@use "talk/heel";

@@ -1,0 +1,51 @@
+@use "../lemon/abstracts/variables" as *;
+
+// Hubble and Webb side by side (pug/sections/_06-jwst.pug): two halves of the canvas, each cropped to the pillars, with Webb's half and its label landing on the click. The labels ride on cream strips low in each half, like an over-media caption.
+
+.reveal .slides section.over-media.pillars {
+  > img {
+    position: absolute;
+    top: 0;
+    inline-size: 50cqw;
+    block-size: 100cqh;
+    max-block-size: none;
+    margin: 0;
+    object-fit: cover;
+  }
+
+  > img.hubble {
+    left: 0;
+    object-position: center 45%;
+  }
+
+  > img.webb {
+    left: 50cqw;
+    object-position: center 40%;
+  }
+
+  .fragment.webb {
+    transition: opacity 500ms $ease-out, visibility 500ms;
+  }
+
+  > p.label {
+    position: absolute;
+    bottom: 12cqh;
+    z-index: 1;
+    max-inline-size: 18ch;
+    padding: 0.12em 0.35em 0.18em;
+    background: $cream;
+    color: $ink;
+    font-family: $font-sans;
+    font-size: $step-heading;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  > p.label.hubble {
+    left: $safe-x;
+  }
+
+  > p.label.webb {
+    left: calc(50cqw + #{$safe-x});
+  }
+}
